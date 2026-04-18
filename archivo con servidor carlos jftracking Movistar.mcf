@@ -1,0 +1,4104 @@
+[
+  {
+    "Name": "dtpAfter",
+    "Type": "DateTimePicker",
+    "Value": "2026-03-23T13:43:06"
+  },
+  {
+    "Name": "dtpBefore",
+    "Type": "DateTimePicker",
+    "Value": "2026-03-23T13:43:06"
+  },
+  {
+    "Name": "textBox_IMEI_WithoutDevice",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "comboBox_Model_WithoutDevice",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "comboBox_FW_WithoutDevice",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "comboBox_mhexFile_Ver_Function",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "comboBox_mhexFile_Ver_Model",
+    "Type": "ComboBox",
+    "Value": "MeitrackManager.FrmMain+ComboxType"
+  },
+  {
+    "Name": "comboBox_mhexFile_Ver_FW",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "checkBox_Ledoff",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "checkBox_Enginecheck",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "checkBox_AutoArmed",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "checkBox_3DShakeWakeUp",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "checkBox_PowerKeyEnable",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "checkBox_BuzzerClose",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "checkBox_BuzzerOff",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "checkBox_AutoSleep",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "checkBox_GPRSButton",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "checkBox_GPSLogButton",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "checkBox_AGPSOn",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "checkBox_WIFIOff",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "checkBox_GPSOff",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "checkBox_AutoAuthorizeMode",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "checkBox_RFIDControlOut1",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "checkBox_AuthorizationCtrl",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "checkBox_VehicleTheftAlarm",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "checkBox_EnableBuzzerToAlert",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "checkBox_TrailerIDFunctionviaiButton",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "checkBox_FallWakeUp",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "checkBox_ShellCheck",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "checkBox_OverSpeedControl",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "checkBox_GpsStaticDrift",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "checkBox_SmsUrlSw",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "checkBox_SleepWhileCharging",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "checkBox_NumberOfSatellitesWhenGPSInvalid",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "checkBox_AutoHangUp",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "checkBox_CloseReplySms",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "radioButton_SleepCounting",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "radioButton_NoSleep",
+    "Type": "RadioButton",
+    "Value": "True"
+  },
+  {
+    "Name": "radioButton_NormalSleep",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "radioButton_DeepSleep",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "radioButton_SuperDeepSleep",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "radioButton_IntelligentTransportation",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "checkBox_WorkMode_Smart",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "numUploadInterval",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numRemoveAlarmInterval",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numOutFenceInterval",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numGPRSInterval",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numGPRSIntervalACCOff",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numVibrationSensitivity",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numEnterSleepTime",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "rdoDeiverMode",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "rdoStudentMode",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "rdoEnableSleep",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "numSleepTime",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "rdoDisableSleep",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "rdoNoChange",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "rdoPowerOn",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "rdoShutdown",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "rdoDisabledControl",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "rdoAuthorizationCard",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "rdoAllCard",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "numericUpDown_39F9",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_39FA",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "cmbib_3822V2_mode",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "num_3822_V2_m0_OutFenceInterval",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "num_3822_V2_m0_RemoveAlarmInterval",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "num_3822_V2_m0_GPRSInterval",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "num_3822_V2_m1_GPRSIntervalACCOff",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "num_3822_V2_m2_MovePredict",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "num_3822_V2_m2_Move",
+    "Type": "NumericUpDown",
+    "Value": "300"
+  },
+  {
+    "Name": "cmbib_3822V2_m2_gsm",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "num_3822_V2_m2_Staationary",
+    "Type": "NumericUpDown",
+    "Value": "300"
+  },
+  {
+    "Name": "cmb_GPSUsage",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "numericUpDown_LocalTimezone",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "checkBox_AESEncryption",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "textBox_AESEncryption",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "textBox_ParameterTable",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "comboBox_SelectParameterTable",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "checkBox_EnabledRoamingParameterTable",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "numericUpDown_GPSFilterSpeedRangeHigh",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_NumberOfGPSSatellites",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_GPSPositioningAccuracy",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_GPSFilterSpeedRangeLow",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "checkBox_GPSDataFilterEnable",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "dateTimePicker_WakeUpTime1",
+    "Type": "DateTimePicker",
+    "Value": "255,255,255"
+  },
+  {
+    "Name": "dateTimePicker_WakeUpTime24",
+    "Type": "DateTimePicker",
+    "Value": "255,255,255"
+  },
+  {
+    "Name": "dateTimePicker_WakeUpTime2",
+    "Type": "DateTimePicker",
+    "Value": "255,255,255"
+  },
+  {
+    "Name": "dateTimePicker_WakeUpTime23",
+    "Type": "DateTimePicker",
+    "Value": "255,255,255"
+  },
+  {
+    "Name": "dateTimePicker_WakeUpTime3",
+    "Type": "DateTimePicker",
+    "Value": "255,255,255"
+  },
+  {
+    "Name": "dateTimePicker_WakeUpTime22",
+    "Type": "DateTimePicker",
+    "Value": "255,255,255"
+  },
+  {
+    "Name": "dateTimePicker_WakeUpTime4",
+    "Type": "DateTimePicker",
+    "Value": "255,255,255"
+  },
+  {
+    "Name": "dateTimePicker_WakeUpTime21",
+    "Type": "DateTimePicker",
+    "Value": "255,255,255"
+  },
+  {
+    "Name": "dateTimePicker_WakeUpTime5",
+    "Type": "DateTimePicker",
+    "Value": "255,255,255"
+  },
+  {
+    "Name": "dateTimePicker_WakeUpTime20",
+    "Type": "DateTimePicker",
+    "Value": "255,255,255"
+  },
+  {
+    "Name": "dateTimePicker_WakeUpTime6",
+    "Type": "DateTimePicker",
+    "Value": "255,255,255"
+  },
+  {
+    "Name": "dateTimePicker_WakeUpTime19",
+    "Type": "DateTimePicker",
+    "Value": "255,255,255"
+  },
+  {
+    "Name": "dateTimePicker_WakeUpTime7",
+    "Type": "DateTimePicker",
+    "Value": "255,255,255"
+  },
+  {
+    "Name": "dateTimePicker_WakeUpTime18",
+    "Type": "DateTimePicker",
+    "Value": "255,255,255"
+  },
+  {
+    "Name": "dateTimePicker_WakeUpTime8",
+    "Type": "DateTimePicker",
+    "Value": "255,255,255"
+  },
+  {
+    "Name": "dateTimePicker_WakeUpTime17",
+    "Type": "DateTimePicker",
+    "Value": "255,255,255"
+  },
+  {
+    "Name": "dateTimePicker_WakeUpTime9",
+    "Type": "DateTimePicker",
+    "Value": "255,255,255"
+  },
+  {
+    "Name": "dateTimePicker_WakeUpTime16",
+    "Type": "DateTimePicker",
+    "Value": "255,255,255"
+  },
+  {
+    "Name": "dateTimePicker_WakeUpTime10",
+    "Type": "DateTimePicker",
+    "Value": "255,255,255"
+  },
+  {
+    "Name": "dateTimePicker_WakeUpTime15",
+    "Type": "DateTimePicker",
+    "Value": "255,255,255"
+  },
+  {
+    "Name": "dateTimePicker_WakeUpTime11",
+    "Type": "DateTimePicker",
+    "Value": "255,255,255"
+  },
+  {
+    "Name": "dateTimePicker_WakeUpTime14",
+    "Type": "DateTimePicker",
+    "Value": "255,255,255"
+  },
+  {
+    "Name": "dateTimePicker_WakeUpTime12",
+    "Type": "DateTimePicker",
+    "Value": "255,255,255"
+  },
+  {
+    "Name": "dateTimePicker_WakeUpTime13",
+    "Type": "DateTimePicker",
+    "Value": "255,255,255"
+  },
+  {
+    "Name": "numericUpDown_ArmedAndUnarmed_PreesTimesOfButton",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_ArmedAndUnarmed_InterferenceDuration",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_ArmedAndUnarmed_ArmedTime",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_ArmedAndUnarmed_TriggerAlarmTime",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "comboBox_Search3",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "comboBox_Search2",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "comboBox_Search1",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "comboBox_GsmMode",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "textBoxEEP2_SYS_DEVICE_NAME",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "comboBox_GPSPositioningMode",
+    "Type": "ComboBox",
+    "Value": "GPS_BEIDOU"
+  },
+  {
+    "Name": "numericUpDown",
+    "Type": "NumericUpDown",
+    "Value": "70"
+  },
+  {
+    "Name": "trackBar_SpaceAllocation",
+    "Type": "TrackBar",
+    "Value": 100
+  },
+  {
+    "Name": "numericUpDown_SystemTimeSynchronization_NTPPort2",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "textBox_SystemTimeSynchronization_NTPServer2",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "numericUpDown_SystemTimeSynchronization_NTPPort1",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "textBox_SystemTimeSynchronization_NTPServer1",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "numericUpDown_SystemTimeSynchronization_NTPSynchronizationTimeout",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "comboBox_SystemTimeSynchronization_Mode",
+    "Type": "ComboBox",
+    "Value": "GNSS ONLY"
+  },
+  {
+    "Name": "comboBox_SystemMaintainSettings_AutoRebootHour",
+    "Type": "ComboBox",
+    "Value": "1"
+  },
+  {
+    "Name": "comboBox_SystemMaintainSettings_AutoRebootDay",
+    "Type": "ComboBox",
+    "Value": "Saturday"
+  },
+  {
+    "Name": "numericUpDown_SystemPowerSettings_PowerOffDelay",
+    "Type": "NumericUpDown",
+    "Value": "5"
+  },
+  {
+    "Name": "comboBox_SystemPowerSettings_PowerMode",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "comboBox_SystemPowerSettings_ControlSystem",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "textBox_DNS_Sever",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "radioButton_HTTP",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "radioButton_TCP1",
+    "Type": "RadioButton",
+    "Value": "True"
+  },
+  {
+    "Name": "radioButton_UDP1",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "comboBox_IPDomain1",
+    "Type": "ComboBox",
+    "Value": "66.97.42.27"
+  },
+  {
+    "Name": "textBox_IPDomainPort1",
+    "Type": "TextBox",
+    "Value": "6100"
+  },
+  {
+    "Name": "textBox_BackupIPDomain",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "numericUpDown_GPRSTimeZone",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "comboBox_GPRSConnectMode",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "radioButton_Close1",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "textBox_BackupIPDomainPort",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "textBox_IPDomain2",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "radioButton_TCP2",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "textBox_IPDomainPort2",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "radioButton_UDP2",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "radioButton_Close2",
+    "Type": "RadioButton",
+    "Value": "True"
+  },
+  {
+    "Name": "textBox_PPPoESettings_APN",
+    "Type": "TextBox",
+    "Value": "internet.movistar.ve"
+  },
+  {
+    "Name": "numericUpDown_PPPoESettings_IdleTime",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_PPPoESettings_RedialPeriod",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "comboBox_PPPoESettings_OperationMode",
+    "Type": "ComboBox",
+    "Value": "Keep Alive"
+  },
+  {
+    "Name": "textBox_PPPoESettings_Password",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "textBox_PPPoESettings_UserName",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "checkBox_PPPoESettings_Enabled",
+    "Type": "CheckBox",
+    "Value": "True"
+  },
+  {
+    "Name": "textBox_3807_APN2",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "textBox_3807_APN2_PSW",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "textBox_3807_APN2_UserName",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "textBox_3807_APN1",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "textBox_3807_APN1_PSW",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "textBox_3807_APN1_UserName",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "textBox_eSIMAPN2",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "textBox_eSIMAPN_PSW2",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "textBox_eSIMAPN_UserName2",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "textBox_eSIMAPN1",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "textBox_eSIMAPN_PSW1",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "textBox_eSIMAPN_UserName1",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "checkBox_AutoAPN",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "textBox_APNPassword",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "textBox_APNUserName",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "textBox_APN",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "comboBox_Protocol",
+    "Type": "ComboBox",
+    "Value": "Auto Event Report"
+  },
+  {
+    "Name": "comboBox_GPRSMode",
+    "Type": "ComboBox",
+    "Value": "Mode1"
+  },
+  {
+    "Name": "numericUpDown_GPRSReportTime",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_GPSLogInterval",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_GPRSInterval",
+    "Type": "NumericUpDown",
+    "Value": "60"
+  },
+  {
+    "Name": "numericUpDown_IntervalUnit",
+    "Type": "NumericUpDown",
+    "Value": "1"
+  },
+  {
+    "Name": "numericUpDown_GPRSIntervalACCOff",
+    "Type": "NumericUpDown",
+    "Value": "1200"
+  },
+  {
+    "Name": "numericUpDown_GPRSIntervalRoam",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_GPRSIntervalACCOffRoam",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_GPRSInterval_SmartMode",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_TrackerByTimeInterval",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_HeartbeatLocationTime",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_CANDataIntervalTime",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_heart_dis",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_GPRSPack",
+    "Type": "NumericUpDown",
+    "Value": "1"
+  },
+  {
+    "Name": "numericUpDown_GprsUpPack",
+    "Type": "NumericUpDown",
+    "Value": "5"
+  },
+  {
+    "Name": "cmbGpsLogSave",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "numericUpDown_GPRSIntervalACCOffNoCharging",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_GPRSIntervalACCOffCharging",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_2813",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_IridiumInterval",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_IridiumIntervalACCOff",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numJTProvinceID",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numJTCityID",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "txtJTManuID",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtJTTerminalType",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtJTTerminalID",
+    "Type": "TextBox",
+    "Value": "867806073726095"
+  },
+  {
+    "Name": "cmbJTCarColor",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtJTCarNum",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtJTSimCardNum",
+    "Type": "TextBox",
+    "Value": "00000000000000000000"
+  },
+  {
+    "Name": "txtJTAuthCode",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtJTHost",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "numJTPort",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "cmbJTProtocol",
+    "Type": "ComboBox",
+    "Value": "Close"
+  },
+  {
+    "Name": "textBox_CommandCenter3",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "textBox_CommandCenter2",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "textBox_CommandCenter1",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "numericUpDown_TimeZone_Minutes",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_TimeZone_Hours",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "comboBox_TimeZone",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "textBox_SuperPassword",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "numericUpDown_AutoReportTimes",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_SMSReportInterval",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "textBox_SMSPassword",
+    "Type": "TextBox",
+    "Value": "0000"
+  },
+  {
+    "Name": "numericUpDown_SMSTimeZone",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "textBox_MonitorPhoneNO5",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "textBox_MonitorPhoneNO4",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "textBox_SMSTrackNO",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "textBox_MonitorPhoneNO3",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "textBox_MonitorPhoneNO2",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "textBox_SMSCNumber",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "textBox_MonitorPhoneNO1",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "checkBox_SelectAll",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "checkedListBox_UploadInformationSelect",
+    "Type": "CheckedListBox",
+    "Value": "True,True,True,True,True,True,True,True,True,False,True,True,False,False,True,True,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,False,True,True,True,False,False,False,False,False,False,False,False,False,False"
+  },
+  {
+    "Name": "GeoFence_Round1",
+    "Type": "GeoFence_Round",
+    "Value": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+  },
+  {
+    "Name": "GeoFence_Round2",
+    "Type": "GeoFence_Round",
+    "Value": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+  },
+  {
+    "Name": "GeoFence_Round3",
+    "Type": "GeoFence_Round",
+    "Value": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+  },
+  {
+    "Name": "GeoFence_Round4",
+    "Type": "GeoFence_Round",
+    "Value": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+  },
+  {
+    "Name": "GeoFence_Round5",
+    "Type": "GeoFence_Round",
+    "Value": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+  },
+  {
+    "Name": "GeoFence_Round6",
+    "Type": "GeoFence_Round",
+    "Value": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+  },
+  {
+    "Name": "GeoFence_Round7",
+    "Type": "GeoFence_Round",
+    "Value": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+  },
+  {
+    "Name": "GeoFence_Round8",
+    "Type": "GeoFence_Round",
+    "Value": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+  },
+  {
+    "Name": "num__outFence",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "num__inFence",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "num__interval",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "num__alarm",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "checkBox_Motor",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "checkBox_Buzzer",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "Geofence_V1_1",
+    "Type": "Geofence_V1",
+    "Value": ""
+  },
+  {
+    "Name": "Geofence_V1_2",
+    "Type": "Geofence_V1",
+    "Value": ""
+  },
+  {
+    "Name": "Geofence_V1_3",
+    "Type": "Geofence_V1",
+    "Value": ""
+  },
+  {
+    "Name": "Geofence_V1_4",
+    "Type": "Geofence_V1",
+    "Value": ""
+  },
+  {
+    "Name": "Geofence_V1_5",
+    "Type": "Geofence_V1",
+    "Value": ""
+  },
+  {
+    "Name": "Geofence_V1_6",
+    "Type": "Geofence_V1",
+    "Value": ""
+  },
+  {
+    "Name": "Geofence_V1_7",
+    "Type": "Geofence_V1",
+    "Value": ""
+  },
+  {
+    "Name": "Geofence_V1_8",
+    "Type": "Geofence_V1",
+    "Value": ""
+  },
+  {
+    "Name": "GroupAuthorize_MDVR_OutN_ChN_v2",
+    "Type": "GroupAuthorize_MDVR_OutN_ChN_v2",
+    "Value": [
+      {
+        "EEPID": "3003",
+        "Value": "0,0,0,0"
+      },
+      {
+        "EEPID": "3004",
+        "Value": "0,0"
+      },
+      {
+        "EEPID": "3005",
+        "Value": "71,0"
+      },
+      {
+        "EEPID": "3006",
+        "Value": "115,0"
+      },
+      {
+        "EEPID": "3007",
+        "Value": "0,0"
+      },
+      {
+        "EEPID": "300B",
+        "Value": "0"
+      },
+      {
+        "EEPID": "303E",
+        "Value": "3,0,0,10,0,1,45,0,246,255,1"
+      },
+      {
+        "EEPID": "305A",
+        "Value": "30,0"
+      },
+      {
+        "EEPID": "3063",
+        "Value": "3,7,60,0,10,0,30,0"
+      },
+      {
+        "EEPID": "3064",
+        "Value": "15,0"
+      },
+      {
+        "EEPID": "4801",
+        "Value": "15,0,0,0,10,0,15,0,0,0,1,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,15,0,0,0,0,83,0,79,0,83,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4802",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,73,0,110,0,50,0,32,0,65,0,99,0,116,0,105,0,118,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,0,7,7,0,41,0"
+      },
+      {
+        "EEPID": "4803",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,73,0,110,0,51,0,32,0,65,0,99,0,116,0,105,0,118,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4804",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,73,0,110,0,52,0,32,0,65,0,99,0,116,0,105,0,118,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4809",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,73,0,110,0,49,0,32,0,73,0,110,0,97,0,99,0,116,0,105,0,118,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "480A",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,73,0,110,0,50,0,32,0,73,0,110,0,97,0,99,0,116,0,105,0,118,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,0,7,7,0,41,0"
+      },
+      {
+        "EEPID": "480B",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,73,0,110,0,51,0,32,0,73,0,110,0,97,0,99,0,116,0,105,0,118,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "480C",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,73,0,110,0,52,0,32,0,73,0,110,0,97,0,99,0,116,0,105,0,118,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4812",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,76,0,111,0,119,0,32,0,69,0,120,0,116,0,45,0,66,0,97,0,116,0,116,0,101,0,114,0,121,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4813",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,83,0,112,0,101,0,101,0,100,0,105,0,110,0,103,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4814",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,69,0,110,0,116,0,101,0,114,0,32,0,70,0,101,0,110,0,99,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4815",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,69,0,120,0,105,0,116,0,32,0,70,0,101,0,110,0,99,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4816",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,69,0,120,0,116,0,45,0,66,0,97,0,116,0,116,0,101,0,114,0,121,0,32,0,79,0,110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,0,7,7,0,41,0"
+      },
+      {
+        "EEPID": "4817",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,69,0,120,0,116,0,45,0,66,0,97,0,116,0,116,0,101,0,114,0,121,0,32,0,67,0,117,0,116,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,0,7,7,0,41,0"
+      },
+      {
+        "EEPID": "4818",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,71,0,80,0,83,0,32,0,83,0,105,0,103,0,110,0,97,0,108,0,32,0,76,0,111,0,115,0,116,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4819",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,71,0,80,0,83,0,32,0,82,0,101,0,99,0,111,0,118,0,101,0,114,0,121,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "481A",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,69,0,110,0,116,0,101,0,114,0,32,0,83,0,108,0,101,0,101,0,112,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,0,7,7,0,41,0"
+      },
+      {
+        "EEPID": "481B",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,69,0,120,0,105,0,116,0,32,0,83,0,108,0,101,0,101,0,112,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,0,7,7,0,41,0"
+      },
+      {
+        "EEPID": "481C",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,71,0,80,0,83,0,32,0,65,0,110,0,116,0,101,0,110,0,110,0,97,0,32,0,67,0,117,0,116,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "481D",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,80,0,111,0,119,0,101,0,114,0,32,0,79,0,110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,0,7,7,0,41,0"
+      },
+      {
+        "EEPID": "481F",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,0,0,0,0,41,0"
+      },
+      {
+        "EEPID": "4820",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,67,0,111,0,114,0,110,0,101,0,114,0,105,0,110,0,103,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4821",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,68,0,105,0,115,0,116,0,97,0,110,0,99,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4822",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,78,0,111,0,119,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,0,7,7,0,33,0"
+      },
+      {
+        "EEPID": "4823",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,73,0,110,0,116,0,101,0,114,0,118,0,97,0,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4824",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,84,0,111,0,119,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4825",
+        "Value": "1,0,0,0,10,0,1,0,0,0,12,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,0,0,0,47,65"
+      },
+      {
+        "EEPID": "4829",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,81,0,117,0,105,0,101,0,116,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,0,7,7,0,41,0"
+      },
+      {
+        "EEPID": "482A",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,77,0,111,0,118,0,105,0,110,0,103,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,0,7,7,0,41,0"
+      },
+      {
+        "EEPID": "4832",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,84,0,101,0,109,0,112,0,32,0,72,0,105,0,103,0,104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4833",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,84,0,101,0,109,0,112,0,32,0,76,0,111,0,119,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4834",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,70,0,117,0,108,0,108,0,32,0,70,0,117,0,101,0,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4835",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,76,0,111,0,119,0,32,0,70,0,117,0,101,0,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4836",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,70,0,117,0,101,0,108,0,32,0,84,0,104,0,101,0,102,0,116,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4846",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,0,7,0,0,32,0"
+      },
+      {
+        "EEPID": "4847",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,0,7,0,0,32,0"
+      },
+      {
+        "EEPID": "4848",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,0,7,0,0,32,0"
+      },
+      {
+        "EEPID": "484E",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,73,0,109,0,112,0,97,0,99,0,116,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4852",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,70,0,117,0,101,0,108,0,32,0,70,0,105,0,108,0,108,0,105,0,110,0,103,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4853",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,85,0,108,0,116,0,45,0,83,0,101,0,110,0,115,0,111,0,114,0,32,0,68,0,114,0,111,0,112,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4857",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,0,0,0,47,65"
+      },
+      {
+        "EEPID": "485A",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,72,0,97,0,114,0,115,0,104,0,32,0,67,0,111,0,114,0,110,0,101,0,114,0,105,0,110,0,103,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "485B",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,72,0,97,0,114,0,115,0,104,0,32,0,67,0,111,0,114,0,110,0,101,0,114,0,105,0,110,0,103,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "485E",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,79,0,117,0,116,0,49,0,32,0,65,0,99,0,116,0,105,0,118,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,1,7,7,0,39,65"
+      },
+      {
+        "EEPID": "485F",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,79,0,117,0,116,0,50,0,32,0,65,0,99,0,116,0,105,0,118,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,1,7,7,0,39,65"
+      },
+      {
+        "EEPID": "4863",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,79,0,117,0,116,0,49,0,32,0,73,0,110,0,97,0,99,0,116,0,105,0,118,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,1,7,7,0,39,65"
+      },
+      {
+        "EEPID": "4864",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,79,0,117,0,116,0,50,0,32,0,73,0,110,0,97,0,99,0,116,0,105,0,118,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,1,7,7,0,39,65"
+      },
+      {
+        "EEPID": "4881",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,72,0,97,0,114,0,115,0,104,0,32,0,66,0,114,0,97,0,107,0,105,0,110,0,103,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4882",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,70,0,97,0,115,0,116,0,32,0,65,0,99,0,99,0,101,0,108,0,101,0,114,0,97,0,116,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4885",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,73,0,100,0,108,0,101,0,32,0,79,0,118,0,101,0,114,0,116,0,105,0,109,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,39,65"
+      },
+      {
+        "EEPID": "4886",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,73,0,100,0,108,0,101,0,32,0,82,0,101,0,99,0,111,0,118,0,101,0,114,0,121,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,39,65"
+      },
+      {
+        "EEPID": "4887",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,70,0,97,0,116,0,105,0,103,0,117,0,101,0,32,0,68,0,114,0,105,0,118,0,105,0,110,0,103,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,39,65"
+      },
+      {
+        "EEPID": "4888",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,69,0,110,0,111,0,117,0,103,0,104,0,32,0,82,0,101,0,115,0,116,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,39,65"
+      },
+      {
+        "EEPID": "488A",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,83,0,112,0,101,0,101,0,100,0,32,0,82,0,101,0,99,0,111,0,118,0,101,0,114,0,121,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,39,65"
+      },
+      {
+        "EEPID": "488B",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,77,0,97,0,105,0,110,0,116,0,101,0,110,0,97,0,110,0,99,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "48A5",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,0,0,0,47,65"
+      },
+      {
+        "EEPID": "4A41",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,67,0,72,0,49,0,32,0,86,0,105,0,100,0,101,0,111,0,32,0,76,0,111,0,115,0,115,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4A42",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,67,0,72,0,50,0,32,0,86,0,105,0,100,0,101,0,111,0,32,0,76,0,111,0,115,0,115,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4A43",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,67,0,72,0,51,0,32,0,86,0,105,0,100,0,101,0,111,0,32,0,76,0,111,0,115,0,115,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4A44",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,67,0,72,0,52,0,32,0,86,0,105,0,100,0,101,0,111,0,32,0,76,0,111,0,115,0,115,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4A61",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,83,0,116,0,111,0,114,0,97,0,103,0,101,0,32,0,70,0,97,0,105,0,108,0,117,0,114,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4A62",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,83,0,116,0,111,0,114,0,97,0,103,0,101,0,32,0,70,0,117,0,108,0,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4A63",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,67,0,72,0,49,0,32,0,82,0,101,0,99,0,111,0,118,0,101,0,114,0,121,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4A64",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,67,0,72,0,50,0,32,0,82,0,101,0,99,0,111,0,118,0,101,0,114,0,121,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4A65",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,67,0,72,0,51,0,32,0,82,0,101,0,99,0,111,0,118,0,101,0,114,0,121,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4A66",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,67,0,72,0,52,0,32,0,82,0,101,0,99,0,111,0,118,0,101,0,114,0,121,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4A88",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,102,0,97,0,99,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4A89",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,70,0,111,0,114,0,119,0,97,0,114,0,100,0,45,0,67,0,87,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4A8B",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,80,0,101,0,100,0,101,0,115,0,116,0,114,0,105,0,97,0,110,0,45,0,67,0,87,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4A8C",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,76,0,101,0,102,0,116,0,45,0,76,0,68,0,87,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4A8D",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,82,0,105,0,103,0,104,0,116,0,45,0,76,0,68,0,87,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4A8E",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,72,0,77,0,87,0,40,0,68,0,105,0,115,0,116,0,97,0,110,0,99,0,101,0,41,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4A90",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,68,0,77,0,83,0,95,0,67,0,65,0,76,0,76,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4A91",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,68,0,77,0,83,0,95,0,83,0,77,0,79,0,75,0,73,0,78,0,71,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4A92",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,68,0,77,0,83,0,95,0,84,0,73,0,82,0,69,0,68,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4A93",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,68,0,77,0,83,0,95,0,89,0,65,0,87,0,78,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4A94",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,68,0,77,0,83,0,95,0,68,0,73,0,83,0,84,0,82,0,65,0,67,0,84,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4A95",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,68,0,77,0,83,0,95,0,76,0,79,0,83,0,69,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4A96",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,68,0,77,0,83,0,95,0,67,0,79,0,86,0,69,0,82,0,69,0,68,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4A97",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,68,0,77,0,83,0,95,0,73,0,82,0,95,0,66,0,76,0,79,0,67,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4A98",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,68,0,77,0,83,0,95,0,83,0,69,0,65,0,84,0,66,0,69,0,76,0,84,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4805",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,73,0,110,0,53,0,32,0,65,0,99,0,116,0,105,0,118,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4806",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,73,0,110,0,54,0,32,0,65,0,99,0,116,0,105,0,118,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4807",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,73,0,110,0,55,0,32,0,65,0,99,0,116,0,105,0,118,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4808",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,73,0,110,0,56,0,32,0,65,0,99,0,116,0,105,0,118,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "480D",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,73,0,110,0,53,0,32,0,73,0,110,0,97,0,99,0,116,0,105,0,118,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "480E",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,73,0,110,0,54,0,32,0,73,0,110,0,97,0,99,0,116,0,105,0,118,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "480F",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,73,0,110,0,55,0,32,0,73,0,110,0,97,0,99,0,116,0,105,0,118,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4810",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,73,0,110,0,56,0,32,0,73,0,110,0,97,0,99,0,116,0,105,0,118,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,1,7,7,0,47,65"
+      },
+      {
+        "EEPID": "4860",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,79,0,117,0,116,0,51,0,32,0,65,0,99,0,116,0,105,0,118,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,1,7,7,0,39,65"
+      },
+      {
+        "EEPID": "4861",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,79,0,117,0,116,0,52,0,32,0,65,0,99,0,116,0,105,0,118,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,1,7,7,0,39,65"
+      },
+      {
+        "EEPID": "4862",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,79,0,117,0,116,0,53,0,32,0,65,0,99,0,116,0,105,0,118,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,1,7,7,0,39,65"
+      },
+      {
+        "EEPID": "4865",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,79,0,117,0,116,0,51,0,32,0,73,0,110,0,97,0,99,0,116,0,105,0,118,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,1,7,7,0,39,65"
+      },
+      {
+        "EEPID": "4866",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,79,0,117,0,116,0,52,0,32,0,73,0,110,0,97,0,99,0,116,0,105,0,118,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,1,7,7,0,39,65"
+      },
+      {
+        "EEPID": "4867",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,79,0,117,0,116,0,53,0,32,0,73,0,110,0,97,0,99,0,116,0,105,0,118,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,1,7,7,0,39,65"
+      },
+      {
+        "EEPID": "489F",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,79,0,117,0,116,0,54,0,32,0,65,0,99,0,116,0,105,0,118,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,1,7,7,0,39,65"
+      },
+      {
+        "EEPID": "48A0",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,79,0,117,0,116,0,55,0,32,0,65,0,99,0,116,0,105,0,118,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,1,7,7,0,39,65"
+      },
+      {
+        "EEPID": "48A2",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,79,0,117,0,116,0,54,0,32,0,73,0,110,0,97,0,99,0,116,0,105,0,118,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,1,7,7,0,39,65"
+      },
+      {
+        "EEPID": "48A3",
+        "Value": "0,0,0,0,10,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,79,0,117,0,116,0,55,0,32,0,73,0,110,0,97,0,99,0,116,0,105,0,118,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,1,7,7,0,39,65"
+      },
+      {
+        "EEPID": "7001",
+        "Value": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+      },
+      {
+        "EEPID": "7002",
+        "Value": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+      },
+      {
+        "EEPID": "7003",
+        "Value": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+      },
+      {
+        "EEPID": "8109",
+        "Value": "0,0,0,0,0"
+      },
+      {
+        "EEPID": "810A",
+        "Value": "0,0,0,0,0,0"
+      },
+      {
+        "EEPID": "8587",
+        "Value": "1,232,3,3"
+      },
+      {
+        "EEPID": "C240",
+        "Value": "13,13,1,0,30,0,0,0,5,0,0,0,1"
+      },
+      {
+        "EEPID": "C241",
+        "Value": "13,13,1,0,30,0,0,0,5,0,0,0,1"
+      },
+      {
+        "EEPID": "C242",
+        "Value": "13,13,1,0,50,0,0,0,5,0,0,0,1"
+      },
+      {
+        "EEPID": "C243",
+        "Value": "13,13,1,0,50,0,0,0,5,0,0,0,1"
+      },
+      {
+        "EEPID": "C244",
+        "Value": "13,13,1,0,30,0,0,0,30,0,0,0,1"
+      },
+      {
+        "EEPID": "C247",
+        "Value": "13,13,1,1,10,0,0,0,10,0,0,0,1"
+      },
+      {
+        "EEPID": "C248",
+        "Value": "13,13,1,1,10,0,0,0,10,0,0,0,1"
+      },
+      {
+        "EEPID": "C249",
+        "Value": "13,13,1,1,10,0,0,0,10,0,0,0,1"
+      },
+      {
+        "EEPID": "C24A",
+        "Value": "13,13,1,1,10,0,0,0,10,0,0,0,1"
+      },
+      {
+        "EEPID": "C24B",
+        "Value": "13,13,1,1,10,0,0,0,10,0,0,0,1"
+      },
+      {
+        "EEPID": "C24C",
+        "Value": "13,13,1,1,10,0,0,0,44,1,0,0,1"
+      },
+      {
+        "EEPID": "C24D",
+        "Value": "13,13,1,1,10,0,0,0,44,1,0,0,1"
+      },
+      {
+        "EEPID": "C24E",
+        "Value": "13,13,1,1,10,0,0,0,10,0,0,0,1"
+      },
+      {
+        "EEPID": "C24F",
+        "Value": "13,13,1,1,10,0,0,0,44,1,0,0,1"
+      },
+      {
+        "EEPID": "C2C2",
+        "Value": "120,0,75"
+      }
+    ]
+  },
+  {
+    "Name": "numericUpDown_SpeedValue",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_SendTimeHigh",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_SendTimeLow",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "textBox_BLEVersion",
+    "Type": "TextBox",
+    "Value": "CB399J1-V007"
+  },
+  {
+    "Name": "textBox_BLE_Broadcastname",
+    "Type": "TextBox",
+    "Value": "867806073726095"
+  },
+  {
+    "Name": "numericUpDown_BLE_BroadcastInterval",
+    "Type": "NumericUpDown",
+    "Value": "1000"
+  },
+  {
+    "Name": "textBox_BLE_BluetoothPSW",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "checkBox_BLE_ManufacturerSpecificData",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "textBox_BLE_CompanyIdentifierCode",
+    "Type": "TextBox",
+    "Value": "0000"
+  },
+  {
+    "Name": "textBox_BLE_CustomAdvertisingDataContents",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "numericUpDown1",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown2",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "comboBox_BLE_Mode",
+    "Type": "ComboBox",
+    "Value": "Broadcasting"
+  },
+  {
+    "Name": "comboBox2",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "comboBox3",
+    "Type": "ComboBox",
+    "Value": "1Mbps"
+  },
+  {
+    "Name": "numericUpDown_BLE_ScanningInterval",
+    "Type": "NumericUpDown",
+    "Value": "100"
+  },
+  {
+    "Name": "numericUpDown_BLE_ScanningTime",
+    "Type": "NumericUpDown",
+    "Value": "100"
+  },
+  {
+    "Name": "numericUpDown6",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "comboBox4",
+    "Type": "ComboBox",
+    "Value": "主动扫描"
+  },
+  {
+    "Name": "numericUpDown7",
+    "Type": "NumericUpDown",
+    "Value": "1"
+  },
+  {
+    "Name": "numericUpDown8",
+    "Type": "NumericUpDown",
+    "Value": "5"
+  },
+  {
+    "Name": "iBeacon_V1",
+    "Type": "iBeacon_V1",
+    "Value": "3,4,30,0,0,0,0,78,117,108,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,78,117,108,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,78,117,108,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,78,117,108,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,78,117,108,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,78,117,108,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,78,117,108,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,78,117,108,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,78,117,108,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,78,117,108,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,78,117,108,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,78,117,108,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,78,117,108,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,78,117,108,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,78,117,108,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,78,117,108,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+  },
+  {
+    "Name": "TemperatureSensor_V1",
+    "Type": "TemperatureSensor_V1",
+    "Value": "3,4,60,0,0,0,0,78,117,108,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,78,117,108,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,78,117,108,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,78,117,108,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+  },
+  {
+    "Name": "dateFOTA_Clock",
+    "Type": "DateTimePicker",
+    "Value": "2026-03-23T00:00:00"
+  },
+  {
+    "Name": "numFOTA_Timing",
+    "Type": "NumericUpDown",
+    "Value": "1440"
+  },
+  {
+    "Name": "numFOTA_Port",
+    "Type": "NumericUpDown",
+    "Value": "3033"
+  },
+  {
+    "Name": "txtFOTA_IPDomain",
+    "Type": "TextBox",
+    "Value": "fm.meitrack.com"
+  },
+  {
+    "Name": "ChkFOTA",
+    "Type": "CheckBox",
+    "Value": "True"
+  },
+  {
+    "Name": "cmbTurnSignalInputRight",
+    "Type": "ComboBox",
+    "Value": "Input4"
+  },
+  {
+    "Name": "cmbTurnSignalInputLeft",
+    "Type": "ComboBox",
+    "Value": "Input3"
+  },
+  {
+    "Name": "numAdasPCM",
+    "Type": "NumericUpDown",
+    "Value": "2.5"
+  },
+  {
+    "Name": "numAdasHMW",
+    "Type": "NumericUpDown",
+    "Value": "1.6"
+  },
+  {
+    "Name": "numAdasFrameRate",
+    "Type": "NumericUpDown",
+    "Value": "5"
+  },
+  {
+    "Name": "numAdasFCW",
+    "Type": "NumericUpDown",
+    "Value": "3.6"
+  },
+  {
+    "Name": "numAdasLDW",
+    "Type": "NumericUpDown",
+    "Value": "-0.3"
+  },
+  {
+    "Name": "numDmsFrameRate",
+    "Type": "NumericUpDown",
+    "Value": "3"
+  },
+  {
+    "Name": "numDmsDutyCycle9",
+    "Type": "NumericUpDown",
+    "Value": "0.7"
+  },
+  {
+    "Name": "numDmsDelayTime9",
+    "Type": "NumericUpDown",
+    "Value": "5"
+  },
+  {
+    "Name": "numDmsDutyCycle8",
+    "Type": "NumericUpDown",
+    "Value": "0.7"
+  },
+  {
+    "Name": "numDmsDelayTime8",
+    "Type": "NumericUpDown",
+    "Value": "10"
+  },
+  {
+    "Name": "numDmsDutyCycle7",
+    "Type": "NumericUpDown",
+    "Value": "0.5"
+  },
+  {
+    "Name": "numDmsDelayTime7",
+    "Type": "NumericUpDown",
+    "Value": "4"
+  },
+  {
+    "Name": "numDmsDutyCycle6",
+    "Type": "NumericUpDown",
+    "Value": "0.7"
+  },
+  {
+    "Name": "numDmsDelayTime6",
+    "Type": "NumericUpDown",
+    "Value": "5"
+  },
+  {
+    "Name": "numDmsDutyCycle5",
+    "Type": "NumericUpDown",
+    "Value": "0.7"
+  },
+  {
+    "Name": "numDmsDelayTime5",
+    "Type": "NumericUpDown",
+    "Value": "3"
+  },
+  {
+    "Name": "numDmsDutyCycle4",
+    "Type": "NumericUpDown",
+    "Value": "0.7"
+  },
+  {
+    "Name": "numDmsDelayTime4",
+    "Type": "NumericUpDown",
+    "Value": "2"
+  },
+  {
+    "Name": "numDmsDutyCycle3",
+    "Type": "NumericUpDown",
+    "Value": "0.7"
+  },
+  {
+    "Name": "numDmsDelayTime3",
+    "Type": "NumericUpDown",
+    "Value": "3"
+  },
+  {
+    "Name": "numDmsDutyCycle2",
+    "Type": "NumericUpDown",
+    "Value": "0.7"
+  },
+  {
+    "Name": "numDmsDelayTime2",
+    "Type": "NumericUpDown",
+    "Value": "3"
+  },
+  {
+    "Name": "numDmsDutyCycle1",
+    "Type": "NumericUpDown",
+    "Value": "0.7"
+  },
+  {
+    "Name": "numDmsDelayTime1",
+    "Type": "NumericUpDown",
+    "Value": "3"
+  },
+  {
+    "Name": "AdasDmsConfig",
+    "Type": "AdasDmsConfig",
+    "Value": [
+      {
+        "EEPID": "C251",
+        "Value": "1,110,1,0,0,0,0,0,0,150,0,0,0,100,0,0,0,200,0,0,0,150,0,0,0,100,0,0,0"
+      },
+      {
+        "EEPID": "C2D1",
+        "Value": "50,0,0,0,50,0,0,0,232,3,0,0,88,2,0,0"
+      }
+    ]
+  },
+  {
+    "Name": "checkShowTh",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "chkDmsPic",
+    "Type": "CheckBox",
+    "Value": "True"
+  },
+  {
+    "Name": "chkAdasPic",
+    "Type": "CheckBox",
+    "Value": "True"
+  },
+  {
+    "Name": "chkFBsdPic",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "chkBBsdPic",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "chkLBsdPic",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "chkRBsdPic",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "chkFaceAlarmView",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "chkHmsAlarmView",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "cmbDmsChn",
+    "Type": "ComboBox",
+    "Value": "1"
+  },
+  {
+    "Name": "cmbAdasChn",
+    "Type": "ComboBox",
+    "Value": "2"
+  },
+  {
+    "Name": "cmbFBsdChn",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "cmbBBsdChn",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "cmbLBsdChn",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "cmbRBsdChn",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "cmbHms_FRChn",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "chkAi",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "chkDms",
+    "Type": "CheckBox",
+    "Value": "True"
+  },
+  {
+    "Name": "chkAdas",
+    "Type": "CheckBox",
+    "Value": "True"
+  },
+  {
+    "Name": "chkFBsd",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "chkBBsd",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "chkLBsd",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "chkRBsd",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "chkFaceFunction",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "chkHmsFunction",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "VideoRoration_V11",
+    "Type": "VideoRotation_V1",
+    "Value": "1,0,5,0,0"
+  },
+  {
+    "Name": "VideoRoration_V12",
+    "Type": "VideoRotation_V1",
+    "Value": "2,0,5,0,0"
+  },
+  {
+    "Name": "VideoRoration_V13",
+    "Type": "VideoRotation_V1",
+    "Value": "3,0,5,0,0"
+  },
+  {
+    "Name": "VideoRoration_V14",
+    "Type": "VideoRotation_V1",
+    "Value": "4,0,5,0,0"
+  },
+  {
+    "Name": "comboBox_DVRBasicSettings_VideoFormat",
+    "Type": "ComboBox",
+    "Value": "PAL"
+  },
+  {
+    "Name": "comboBox_DVRBasicSettings_DiskFullStrategy",
+    "Type": "ComboBox",
+    "Value": "Overwrite"
+  },
+  {
+    "Name": "numericUpDown_DVRBasicSettings_AlarmStoragePercentage",
+    "Type": "NumericUpDown",
+    "Value": "80"
+  },
+  {
+    "Name": "numericUpDown_DVRBasicSettings_AlamSnapshotInterval",
+    "Type": "NumericUpDown",
+    "Value": "1"
+  },
+  {
+    "Name": "numericUpDown_DVRBasicSettings_AlamSnapshotNumber",
+    "Type": "NumericUpDown",
+    "Value": "1"
+  },
+  {
+    "Name": "comboBox_VideoOutMode",
+    "Type": "ComboBox",
+    "Value": "Normal"
+  },
+  {
+    "Name": "numericUpDown_DVRBasicSettings_AlamPrerecordingTime",
+    "Type": "NumericUpDown",
+    "Value": "10"
+  },
+  {
+    "Name": "numericUpDown_DVRBasicSettings_AlamRecordingDuration",
+    "Type": "NumericUpDown",
+    "Value": "300"
+  },
+  {
+    "Name": "numericUpDown_Stream_Push_Time",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "checkBox_OSDParameterSettings_DateTime",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "checkBox_OSDParameterSettings_LicensePlateNumber",
+    "Type": "CheckBox",
+    "Value": "True"
+  },
+  {
+    "Name": "checkBox_OSDParameterSettings_Channel",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "checkBox_OSDParameterSettings_LatitudeLongitude",
+    "Type": "CheckBox",
+    "Value": "True"
+  },
+  {
+    "Name": "checkBox_OSDParameterSettings_DrivingRecordSpeed",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "checkBox_OSDParameterSettings_SatellitePositioningSpeed",
+    "Type": "CheckBox",
+    "Value": "True"
+  },
+  {
+    "Name": "checkBox_OSDParameterSettings_ContinuousDrivingTime",
+    "Type": "CheckBox",
+    "Value": "True"
+  },
+  {
+    "Name": "checkBox_OSDParameterSettings_ContinuousDrivingMileage",
+    "Type": "CheckBox",
+    "Value": "True"
+  },
+  {
+    "Name": "checkBox_OSDParameterSettings_AlarmInfo",
+    "Type": "CheckBox",
+    "Value": "True"
+  },
+  {
+    "Name": "comboBox_VideoEncoding_CameraType",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "VideoEncoding_1",
+    "Type": "VideoEncoding_V3",
+    "Value": "1,69,69,128,1,0,0,7,52,0,0,0,4,1,3,25,140,8,2,10,0,10,0,10,0,1,1,128,1,0,0,7,6,0,0,0,2,1,3,25,33,5,2,10,0,10,0,10,0,1,1"
+  },
+  {
+    "Name": "VideoEncoding_2",
+    "Type": "VideoEncoding_V3",
+    "Value": "1,11,11,128,1,0,0,7,52,8,0,0,4,1,0,25,0,4,2,10,0,10,0,10,0,1,1,128,1,0,0,7,6,0,0,0,2,1,0,10,251,0,2,10,0,10,0,10,0,1,1"
+  },
+  {
+    "Name": "VideoEncoding_3",
+    "Type": "VideoEncoding_V3",
+    "Value": "1,128,128,128,1,0,0,8,20,0,0,0,4,1,2,25,0,4,2,10,0,10,0,10,0,1,1,128,1,0,0,8,6,0,0,0,1,1,3,10,125,0,2,10,0,10,0,10,0,1,1"
+  },
+  {
+    "Name": "VideoEncoding_4",
+    "Type": "VideoEncoding_V3",
+    "Value": "1,128,128,128,1,0,0,8,20,0,0,0,4,1,2,25,0,4,2,10,0,10,0,10,0,1,1,128,1,0,0,8,6,0,0,0,1,1,3,10,125,0,2,10,0,10,0,10,0,1,1"
+  },
+  {
+    "Name": "VideoRecord_1",
+    "Type": "VideoRecord_V2",
+    "Value": "1,42,43,132,3,3,0,0,1,2,1,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,1,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,1,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,1,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,1,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,1,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,1,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255"
+  },
+  {
+    "Name": "VideoRecord_2",
+    "Type": "VideoRecord_V2",
+    "Value": "1,42,43,132,3,3,0,0,1,2,1,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,1,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,1,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,1,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,1,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,1,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,1,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255"
+  },
+  {
+    "Name": "VideoRecord_3",
+    "Type": "VideoRecord_V2",
+    "Value": "1,42,43,132,3,3,0,0,60,2,1,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,1,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,1,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,1,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,1,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,1,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,1,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255"
+  },
+  {
+    "Name": "VideoRecord_4",
+    "Type": "VideoRecord_V2",
+    "Value": "1,42,43,132,3,3,0,0,60,2,1,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,1,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,1,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,1,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,1,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,1,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,1,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,0,0,0,0,23,59,59,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255"
+  },
+  {
+    "Name": "textBox_Language",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "numericUpDown1",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "comboBox_AudioFormat",
+    "Type": "ComboBox",
+    "Value": "AAC"
+  },
+  {
+    "Name": "GroupVideoSaveStrategy_V1",
+    "Type": "GroupVideoSaveStrategy_V1",
+    "Value": "1,15,0,0,0,0,0,0,0,0,0,0,0,15,0,0,0,15,0,0,0,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15,0,0,0,15,0,0,0,0,0,0,0"
+  },
+  {
+    "Name": "textBox_Language",
+    "Type": "TextBox",
+    "Value": "en"
+  },
+  {
+    "Name": "comboBox_AudioFormat",
+    "Type": "ComboBox",
+    "Value": "MP3"
+  },
+  {
+    "Name": "EventTriggerScreenPlay_V1",
+    "Type": "EventTriggerScreenPlay_V1",
+    "Value": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+  },
+  {
+    "Name": "comboBox_PressureUnit",
+    "Type": "ComboBox",
+    "Value": "PSI"
+  },
+  {
+    "Name": "numericUpDown_HighTemperature",
+    "Type": "NumericUpDown",
+    "Value": "85"
+  },
+  {
+    "Name": "numericUpDown_TrailerLowPressure",
+    "Type": "NumericUpDown",
+    "Value": "101.5"
+  },
+  {
+    "Name": "numericUpDown_TrailerHighPressure",
+    "Type": "NumericUpDown",
+    "Value": "174.0"
+  },
+  {
+    "Name": "numericUpDown_Axle4LowPressure",
+    "Type": "NumericUpDown",
+    "Value": "101.5"
+  },
+  {
+    "Name": "numericUpDown_Axle4HighPressure",
+    "Type": "NumericUpDown",
+    "Value": "174.0"
+  },
+  {
+    "Name": "numericUpDown_Axle3LowPressure",
+    "Type": "NumericUpDown",
+    "Value": "101.5"
+  },
+  {
+    "Name": "numericUpDown_Axle3HighPressure",
+    "Type": "NumericUpDown",
+    "Value": "174.0"
+  },
+  {
+    "Name": "numericUpDown_Axle2LowPressure",
+    "Type": "NumericUpDown",
+    "Value": "101.5"
+  },
+  {
+    "Name": "numericUpDown_Axle2HighPressure",
+    "Type": "NumericUpDown",
+    "Value": "174.0"
+  },
+  {
+    "Name": "numericUpDown_Axle1LowPressure",
+    "Type": "NumericUpDown",
+    "Value": "101.5"
+  },
+  {
+    "Name": "numericUpDown_Axle1HighPressure",
+    "Type": "NumericUpDown",
+    "Value": "174.0"
+  },
+  {
+    "Name": "txtT_133",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_101",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_129",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_69",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_97",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_135",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_37",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_140",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_139",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_65",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_152",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_103",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_150",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_33",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_146",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_108",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_148",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_142",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_107",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_144",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_149",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_120",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_151",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_71",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_145",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_118",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_147",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_39",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_141",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_114",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_143",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_76",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_137",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_116",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_138",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_44",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_136",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_110",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_134",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_75",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_132",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_112",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_130",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_43",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_131",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_117",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_88",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_119",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_56",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_113",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_86",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_115",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_54",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_109",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_82",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_111",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_50",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_105",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_84",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_106",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_52",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_104",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_78",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_102",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_46",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_100",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_80",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_98",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_48",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_99",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_85",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_53",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_87",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_55",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_81",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_49",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_83",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_51",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_77",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_45",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_79",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_47",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_73",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_41",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_74",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_42",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_72",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_40",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_70",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_38",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_68",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_36",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_66",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_34",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_67",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_35",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_11",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_13",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_14",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_12",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_10",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_7",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_8",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_9",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_3",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_6",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_4",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_5",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_1",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtT_2",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "textBox_SuperPassword",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "comboBox1",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "comboBox2",
+    "Type": "ComboBox",
+    "Value": "MP4"
+  },
+  {
+    "Name": "textBox_FTPSetting_Port",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "checkBox_SFTPEnabled",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "numericUpDown_FTPSetting_Port",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "textBox_FTPSetting_RemoteDirectory",
+    "Type": "TextBox",
+    "Value": "867806073726095"
+  },
+  {
+    "Name": "checkBox_FTPSetting_AnonymousLogin",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "textBox_FTPSetting_Password",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "textBox_FTPSetting_UserName",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "numericUpDown_FTPSetting_MaximumFileSize",
+    "Type": "NumericUpDown",
+    "Value": "1024"
+  },
+  {
+    "Name": "checkBox_FTPSetting_FTPEnabled",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "textBox_FTPSetting_IPDomain",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "textBox_FTPSetting_Port_download",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "numericUpDown_FTPSetting_Port_download",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "textBox_FTPSetting_RemoteDirectory_download",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "textBox_FTPSetting_Password_download",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "textBox_FTPSetting_UserName_download",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "checkBox_FTPSetting_FTPEnabled_download",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "textBox_FTPSetting_IPDomain_download",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "comboBox_AP_SecurityMode",
+    "Type": "ComboBox",
+    "Value": "WPA2-PSK"
+  },
+  {
+    "Name": "comboBox_AP_WPAAlgorithms",
+    "Type": "ComboBox",
+    "Value": "TKIPAES"
+  },
+  {
+    "Name": "checkBox_AP_DHCP_Enabled",
+    "Type": "CheckBox",
+    "Value": "True"
+  },
+  {
+    "Name": "textBox_AP_DHCP_SubnetMask",
+    "Type": "TextBox",
+    "Value": "255.255.255.0"
+  },
+  {
+    "Name": "textBox_AP_DHCP_DefaultGateway",
+    "Type": "TextBox",
+    "Value": "192.168.159.1"
+  },
+  {
+    "Name": "textBox_AP_DHCP_PreferredDNSServer",
+    "Type": "TextBox",
+    "Value": "223.5.5.5"
+  },
+  {
+    "Name": "textBox_AP_DHCP_AlternateDNSServer",
+    "Type": "TextBox",
+    "Value": "223.6.6.6"
+  },
+  {
+    "Name": "textBox_AP_DHCP_InitialIPAddress",
+    "Type": "TextBox",
+    "Value": "192.168.159.2"
+  },
+  {
+    "Name": "textBox_AP_DHCP_EndIPAddress",
+    "Type": "TextBox",
+    "Value": "192.168.159.235"
+  },
+  {
+    "Name": "textBox_AP_WirelessPara_SSID",
+    "Type": "TextBox",
+    "Value": "MD300-867806073726095"
+  },
+  {
+    "Name": "textBox_AP_WirelessPara_Key",
+    "Type": "TextBox",
+    "Value": "88888888"
+  },
+  {
+    "Name": "comboBox_AP_FrequencyBand",
+    "Type": "ComboBox",
+    "Value": "2.4G"
+  },
+  {
+    "Name": "comboBox_AP_Channel",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "checkBox_AP_Enabled",
+    "Type": "CheckBox",
+    "Value": "True"
+  },
+  {
+    "Name": "Wi_FiList_V2",
+    "Type": "Wi_FiList_V2",
+    "Value": "3,1,49,57,50,46,49,54,56,46,51,46,49,57,57,0,0,50,53,53,46,50,53,53,46,50,53,53,46,48,0,0,49,57,50,46,49,54,56,46,51,46,49,0,0,0,0,50,50,51,46,53,46,53,46,53,0,0,0,0,0,0,50,50,51,46,54,46,54,46,54,0,0,0,0,0,0,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+  },
+  {
+    "Name": "comboBox_RouteSettings_RouteMode",
+    "Type": "ComboBox",
+    "Value": "Auto"
+  },
+  {
+    "Name": "dateTimePicker_MaintenanceDate8",
+    "Type": "DateTimePicker",
+    "Value": "1990-01-01T00:00:00"
+  },
+  {
+    "Name": "dateTimePicker_MaintenanceDate7",
+    "Type": "DateTimePicker",
+    "Value": "1990-01-01T00:00:00"
+  },
+  {
+    "Name": "dateTimePicker_MaintenanceDate6",
+    "Type": "DateTimePicker",
+    "Value": "1990-01-01T00:00:00"
+  },
+  {
+    "Name": "dateTimePicker_MaintenanceDate5",
+    "Type": "DateTimePicker",
+    "Value": "1990-01-01T00:00:00"
+  },
+  {
+    "Name": "dateTimePicker_MaintenanceDate4",
+    "Type": "DateTimePicker",
+    "Value": "1990-01-01T00:00:00"
+  },
+  {
+    "Name": "dateTimePicker_MaintenanceDate3",
+    "Type": "DateTimePicker",
+    "Value": "1990-01-01T00:00:00"
+  },
+  {
+    "Name": "dateTimePicker_MaintenanceDate2",
+    "Type": "DateTimePicker",
+    "Value": "1990-01-01T00:00:00"
+  },
+  {
+    "Name": "dateTimePicker_MaintenanceDate1",
+    "Type": "DateTimePicker",
+    "Value": "1990-01-01T00:00:00"
+  },
+  {
+    "Name": "textBox_MaintenanceMileagePoint8",
+    "Type": "TextBox",
+    "Value": "0"
+  },
+  {
+    "Name": "textBox_MaintenanceMileagePoint7",
+    "Type": "TextBox",
+    "Value": "0"
+  },
+  {
+    "Name": "textBox_MaintenanceMileagePoint6",
+    "Type": "TextBox",
+    "Value": "0"
+  },
+  {
+    "Name": "textBox_MaintenanceMileagePoint5",
+    "Type": "TextBox",
+    "Value": "0"
+  },
+  {
+    "Name": "textBox_MaintenanceMileagePoint4",
+    "Type": "TextBox",
+    "Value": "0"
+  },
+  {
+    "Name": "textBox_MaintenanceMileagePoint3",
+    "Type": "TextBox",
+    "Value": "0"
+  },
+  {
+    "Name": "textBox_MaintenanceMileagePoint2",
+    "Type": "TextBox",
+    "Value": "0"
+  },
+  {
+    "Name": "textBox_MaintenanceMileagePoint1",
+    "Type": "TextBox",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_MaintenanceCycleM",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "textBox_MaintenanceCycleKM",
+    "Type": "TextBox",
+    "Value": "0"
+  },
+  {
+    "Name": "textBox_FirstMaintenanceMileage",
+    "Type": "TextBox",
+    "Value": "0"
+  },
+  {
+    "Name": "dateTimePicker_LastMaintenanceDate",
+    "Type": "DateTimePicker",
+    "Value": "1990-01-01T00:00:00"
+  },
+  {
+    "Name": "textBox_LastMaintenanceMileage",
+    "Type": "TextBox",
+    "Value": "0"
+  },
+  {
+    "Name": "GroupIO_V2",
+    "Type": "GroupIO_V2",
+    "Value": [
+      {
+        "EEPID": "3069",
+        "Value": "3,9,1,1,1,0,0,0,1,1,0,1,6,0,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,83,79,83,47,73,78,49,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,2,0,0,0,2,1,0,2,6,0,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,65,67,67,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,1,55,0,0,0,2,1,0,3,150,0,6,0,3,2,1,100,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,73,78,51,47,79,85,84,49,47,65,68,49,0,0,0,0,0,0,0,0,3,1,55,0,0,0,2,1,0,4,150,0,6,0,3,2,2,100,0,0,0,0,0,0,0,0,1,0,2,0,0,0,0,73,78,52,47,79,85,84,50,47,65,68,50,0,0,0,0,0,0,0,0,3,2,55,0,0,0,2,1,0,5,6,0,6,0,3,2,4,44,1,0,0,0,0,0,0,0,1,0,3,0,0,0,0,73,78,53,47,79,85,84,52,47,65,68,51,0,0,0,0,0,0,0,0,3,1,55,0,0,0,2,1,0,6,6,0,6,0,3,2,5,100,0,0,0,0,0,0,0,0,1,0,4,0,0,0,0,73,78,54,47,79,85,84,53,47,65,68,52,0,0,0,0,0,0,0,0,3,1,55,0,0,0,2,1,0,7,6,0,6,0,3,2,6,100,0,0,0,0,0,0,0,0,1,0,5,0,0,0,0,73,78,55,47,79,85,84,54,47,65,68,53,0,0,0,0,0,0,0,0,3,1,55,0,0,0,2,1,0,8,6,0,6,0,3,2,7,100,0,0,0,0,0,0,0,0,1,0,6,0,0,0,0,73,78,56,47,79,85,84,55,47,65,68,54,0,0,0,0,0,0,0,0,2,2,48,0,0,0,2,1,0,0,6,0,6,0,3,2,3,232,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,79,85,84,51,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+      }
+    ]
+  },
+  {
+    "Name": "checkBox_RFIDControlOut1_1",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "comboBox_Speedometer",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "numericUpDown_VehicleTransferCoefficient",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_WaitAuthorizeAlarmTime",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "comboBox_PassthroughEnabled",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "comboBox_G_MousePowerOption",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "comboBox_DB9serialportfunction",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "checkBox_12V",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "checkBox_5V",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "comboBox_CANInterfaceSelection",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "numericUpDown_AlarmValue_AD2",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_AlarmValue_AD1",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_KValue2",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "comboBox_SPDSRC_SEL",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "comboBox_priority3",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "comboBox_priority2",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "comboBox_priority1",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "comboBox_SPDSRC_SEL2",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "numericUpDown_KValue",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "comboBox_SPDSRC",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "numericUpDown_LowFuelAlert_ADsensor",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_HighFuelAlert_ADsensor",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_LowFuelAlert_INVENTUREsensor",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_HighFuelAlert_INVENTUREsensor",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "cmbLicenceMode",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "numVehicleCode",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_LicenseTypeAuthorized1",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_LicenseTypeAuthorized16",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_LicenseTypeAuthorized2",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_LicenseTypeAuthorized15",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_LicenseTypeAuthorized3",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_LicenseTypeAuthorized14",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_LicenseTypeAuthorized4",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_LicenseTypeAuthorized13",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_LicenseTypeAuthorized6",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_LicenseTypeAuthorized12",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_LicenseTypeAuthorized5",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_LicenseTypeAuthorized11",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_LicenseTypeAuthorized7",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_LicenseTypeAuthorized10",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_LicenseTypeAuthorized8",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_LicenseTypeAuthorized9",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "nd_8611_cnt",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "nd_8611_interval",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "nd_8611_speed",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "checkBox_8611_enable",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "FuelSensor_V1",
+    "Type": "FuelSensor_V1",
+    "Value": [
+      {
+        "EEPID": "600A",
+        "Value": "1,5,0,0,126,0,126,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+      }
+    ]
+  },
+  {
+    "Name": "GroupA78_V1",
+    "Type": "GroupA78_V1",
+    "Value": [
+      {
+        "EEPID": "6120",
+        "Value": "2,2,82,83,50,51,50,0,0,0,0,0,16,1,0,64,0,0,0,0,8,4,31,1,128,37,0,0,10,0,8,0,1,5,8,31,0,0,194,1,0,10,0,8,0,0,0,30,31,0,128,37,0,0,10,0,8,0,0,0,82,83,52,56,53,0,0,0,0,0,128,0,0,0,0,0,0,0,7,7,31,0,0,194,1,0,10,0,8,0,0,0"
+      }
+    ]
+  },
+  {
+    "Name": "chkHex",
+    "Type": "CheckBox",
+    "Value": "True"
+  },
+  {
+    "Name": "textBox_RFIDBatchIMEXPort_BindingRFID",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "listBox_RFIDBatchIMEXPort_RFIDList",
+    "Type": "ListBox",
+    "Value": ""
+  },
+  {
+    "Name": "numericUpDown_IgnitionTimeAfterIgnitionOff",
+    "Type": "NumericUpDown",
+    "Value": "60"
+  },
+  {
+    "Name": "numericUpDown_IgnitionTimeAfterSwipingCards",
+    "Type": "NumericUpDown",
+    "Value": "60"
+  },
+  {
+    "Name": "InputAudioAlarm",
+    "Type": "InputAudioAlarm",
+    "Value": [
+      {
+        "EEPID": "C2D2",
+        "Value": "1,255,0,0,0,255,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+      }
+    ]
+  },
+  {
+    "Name": "txtAverageSpeed",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtTotal",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtTotalTime",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "txtOdometers",
+    "Type": "TextBox",
+    "Value": ""
+  },
+  {
+    "Name": "dateTimePicker_GPSLogCCE_To",
+    "Type": "DateTimePicker",
+    "Value": "2026-03-24T00:00:00"
+  },
+  {
+    "Name": "dateTimePicker_GPSLogCCE_From",
+    "Type": "DateTimePicker",
+    "Value": "2026-02-23T00:00:00"
+  },
+  {
+    "Name": "comboBox_GPSLogCCE_IMEI",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "radioButton_Device",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "radioButton_Tracking",
+    "Type": "RadioButton",
+    "Value": "True"
+  },
+  {
+    "Name": "radioButton_GeoFence",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "radioButton_Authorize",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "radioButton_Peripheral",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "radioButton_Maintain",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "radioButton_Network",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "radioButton_Pressure",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "radioButton_Video",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "radioButton_Other",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "radioButton_GPSLog",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "radioButton_GPSLogCCE",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "radioButton_FrequentStopPlace",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "radioButton_OBD",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "radioButton_ADASDMS",
+    "Type": "RadioButton",
+    "Value": "False"
+  },
+  {
+    "Name": "numericUpDown_VoltageValue",
+    "Type": "NumericUpDown",
+    "Value": "11.5"
+  },
+  {
+    "Name": "numericUpDown_LowExternalBatteryAlertThreshold",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_ExternalBatteryRecoveryAlertthreshold",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_VoltageValueSleep",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_AlarmSpeed",
+    "Type": "NumericUpDown",
+    "Value": "71"
+  },
+  {
+    "Name": "numericUpDown_DetectionTime",
+    "Type": "NumericUpDown",
+    "Value": "30"
+  },
+  {
+    "Name": "numericUpDown_OverspeedWarningOffsetValue",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_BuzzerAlertSpeed",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_BuzzerAlertDetectionTime",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_SpeedingThreshold",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_event_upload_frequency",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_ResetTimeEx",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_DetectionTimeEx",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_AlarmSpeedEx",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_UploadInterval",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_AngleValue",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_Distance",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_TowCar_AlarmDuration",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_VibrationWakeUpTime",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_ContinuousMovingDistance",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_EffectiveJudgmentTime",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "comboBox_8612",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "numericUpDown_HarshBrakingAlarmValue_S",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_AccelerateAlarmValue_S",
+    "Type": "NumericUpDown",
+    "Value": "90"
+  },
+  {
+    "Name": "numericUpDown_HarshBrakingAlarmValue",
+    "Type": "NumericUpDown",
+    "Value": "-100"
+  },
+  {
+    "Name": "numericUpDown_HarshBrakingAlarmDuration",
+    "Type": "NumericUpDown",
+    "Value": "30"
+  },
+  {
+    "Name": "numericUpDown_AccelerateAlarmValue",
+    "Type": "NumericUpDown",
+    "Value": "90"
+  },
+  {
+    "Name": "numericUpDown_AccelerateAlarmDuration",
+    "Type": "NumericUpDown",
+    "Value": "30"
+  },
+  {
+    "Name": "numericUpDown_AccelerateInitialVelocity",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_AccelerateAlarmValue_kmhsec",
+    "Type": "NumericUpDown",
+    "Value": "10"
+  },
+  {
+    "Name": "numericUpDown_AccelerateAlarmDuration_secs",
+    "Type": "NumericUpDown",
+    "Value": "1"
+  },
+  {
+    "Name": "numericUpDown_HarshBrakingInitialVelocity",
+    "Type": "NumericUpDown",
+    "Value": "45"
+  },
+  {
+    "Name": "numericUpDown_HarshBrakingAlarmValue_kmhsec",
+    "Type": "NumericUpDown",
+    "Value": "-10"
+  },
+  {
+    "Name": "numericUpDown_HarshBrakingAlarmDuration_secs",
+    "Type": "NumericUpDown",
+    "Value": "1"
+  },
+  {
+    "Name": "numericUpDown_sensorJudgmentThreshold",
+    "Type": "NumericUpDown",
+    "Value": "1"
+  },
+  {
+    "Name": "numericUpDown_sensorAcquisitionInterval",
+    "Type": "NumericUpDown",
+    "Value": "20"
+  },
+  {
+    "Name": "numericUpDown_FatigueDrive_ContinuousTime",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_FatigueDrive_BreakTime",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_FatigueAlarm_ContinuousTime",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_FatigueAlarm_DurationofAlarm",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_FatigueAlarm_BreakTime",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_FatigueAlarm_ContinuousDistance",
+    "Type": "NumericUpDown",
+    "Value": "1"
+  },
+  {
+    "Name": "numericUpDown_FatigueAlarm_Vaild_BreakTime",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_drive_time_v2",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_alarm_time_v2",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_clear_time_v2",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_drive_filter_time_v2",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_driving_distance",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_buzzer_reports_time",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_buzzer_reports_distance",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "checkBox_8603_enabled",
+    "Type": "CheckBox",
+    "Value": "False"
+  },
+  {
+    "Name": "numericUpDown_8603_alarm_time",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_IdlingAlarm_AlarmTime",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_DurationOfSpeed",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_IdlingSpeed",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_IdlingAlarm_DurationofAlarm",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "comboBox_8612_turn",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "comboBox_choose",
+    "Type": "ComboBox",
+    "Value": ""
+  },
+  {
+    "Name": "numericUpDown_AccelerateAlarmValueRight",
+    "Type": "NumericUpDown",
+    "Value": "10"
+  },
+  {
+    "Name": "numericUpDown_AccelerateAlarmDurationRight",
+    "Type": "NumericUpDown",
+    "Value": "10"
+  },
+  {
+    "Name": "numericUpDown_AccelerateAlarmValueLeft",
+    "Type": "NumericUpDown",
+    "Value": "10"
+  },
+  {
+    "Name": "numericUpDown_AccelerateAlarmDurationLeft",
+    "Type": "NumericUpDown",
+    "Value": "10"
+  },
+  {
+    "Name": "numericUpDown_HarshBrakingAlarmValueRight",
+    "Type": "NumericUpDown",
+    "Value": "-10"
+  },
+  {
+    "Name": "numericUpDown_HarshBrakingAlarmDurationRight",
+    "Type": "NumericUpDown",
+    "Value": "10"
+  },
+  {
+    "Name": "numericUpDown_HarshBrakingAlarmValueLeft",
+    "Type": "NumericUpDown",
+    "Value": "-10"
+  },
+  {
+    "Name": "numericUpDown_HarshBrakingAlarmDurationLeft",
+    "Type": "NumericUpDown",
+    "Value": "10"
+  },
+  {
+    "Name": "numericUpDown_Turning_AlarmAngle",
+    "Type": "NumericUpDown",
+    "Value": "60"
+  },
+  {
+    "Name": "numericUpDown_Turning_DetectionTime",
+    "Type": "NumericUpDown",
+    "Value": "10"
+  },
+  {
+    "Name": "numericUpDown_Turning_AlarmSpeed",
+    "Type": "NumericUpDown",
+    "Value": "30"
+  },
+  {
+    "Name": "numericUpDown_turn_sensorJudgmentThreshold",
+    "Type": "NumericUpDown",
+    "Value": "1"
+  },
+  {
+    "Name": "numericUpDown_turn_sensorAcquisitionInterval",
+    "Type": "NumericUpDown",
+    "Value": "20"
+  },
+  {
+    "Name": "numericUpDown_SpeedRecoveryDetectionTime",
+    "Type": "NumericUpDown",
+    "Value": "15"
+  },
+  {
+    "Name": "numericUpDown_Impact_TriggerInterval",
+    "Type": "NumericUpDown",
+    "Value": "0"
+  },
+  {
+    "Name": "numericUpDown_Impact_AlarmDuration",
+    "Type": "NumericUpDown",
+    "Value": "3"
+  },
+  {
+    "Name": "numericUpDown_Impact_AccelerateAlarmValue",
+    "Type": "NumericUpDown",
+    "Value": "1000"
+  },
+  {
+    "Name": "FrmAut_ADAS_AlarmParam",
+    "Type": "FrmAut_ADAS_AlarmParam",
+    "Value": [
+      {
+        "EEPID": "C240",
+        "Value": "13,13,1,0,30,0,0,0,5,0,0,0,1"
+      },
+      {
+        "EEPID": "C241",
+        "Value": "13,13,1,0,30,0,0,0,5,0,0,0,1"
+      },
+      {
+        "EEPID": "C242",
+        "Value": "13,13,1,0,50,0,0,0,5,0,0,0,1"
+      },
+      {
+        "EEPID": "C243",
+        "Value": "13,13,1,0,50,0,0,0,5,0,0,0,1"
+      },
+      {
+        "EEPID": "C244",
+        "Value": "13,13,1,0,30,0,0,0,30,0,0,0,1"
+      },
+      {
+        "EEPID": "C247",
+        "Value": "13,13,1,1,10,0,0,0,10,0,0,0,1"
+      },
+      {
+        "EEPID": "C248",
+        "Value": "13,13,1,1,10,0,0,0,10,0,0,0,1"
+      },
+      {
+        "EEPID": "C249",
+        "Value": "13,13,1,1,10,0,0,0,10,0,0,0,1"
+      },
+      {
+        "EEPID": "C24A",
+        "Value": "13,13,1,1,10,0,0,0,10,0,0,0,1"
+      },
+      {
+        "EEPID": "C24B",
+        "Value": "13,13,1,1,10,0,0,0,10,0,0,0,1"
+      },
+      {
+        "EEPID": "C24C",
+        "Value": "13,13,1,1,10,0,0,0,44,1,0,0,1"
+      },
+      {
+        "EEPID": "C24D",
+        "Value": "13,13,1,1,10,0,0,0,44,1,0,0,1"
+      },
+      {
+        "EEPID": "C24E",
+        "Value": "13,13,1,1,10,0,0,0,10,0,0,0,1"
+      },
+      {
+        "EEPID": "C24F",
+        "Value": "13,13,1,1,10,0,0,0,44,1,0,0,1"
+      }
+    ]
+  },
+  {
+    "Name": "numericUpDown_similarity",
+    "Type": "NumericUpDown",
+    "Value": "75"
+  },
+  {
+    "Name": "numericUpDown_time",
+    "Type": "NumericUpDown",
+    "Value": "120"
+  }
+]

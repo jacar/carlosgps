@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRACKJF - Sistema de Rastreo y Ubicación Satelital</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" sizes="32x32">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="country-select-page">
+
+  <div class="bg-animated">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+
+  <div class="globe-visual">
+    <div class="globe-ring ring-1"></div>
+    <div class="globe-ring ring-2"></div>
+    <div class="globe-ring ring-3"></div>
+    <div class="globe-dot dot-1"></div>
+    <div class="globe-dot dot-2"></div>
+    <div class="globe-dot dot-3"></div>
+    <div class="globe-dot dot-4"></div>
+    <div class="globe-dot dot-5"></div>
+  </div>
+
+  <div class="country-select-container">
+    <div class="logo-area">
+      <div class="logo-icon">
+        <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
+          <circle cx="26" cy="26" r="26" fill="url(#logoGrad)"/>
+          <path d="M26 12C18.268 12 12 18.268 12 26C12 33.732 18.268 40 26 40C33.732 40 40 33.732 40 26C40 18.268 33.732 12 26 12Z" stroke="white" stroke-width="1.5" fill="none"/>
+          <path d="M26 12C22 17 19 21.5 19 26C19 30.5 22 35 26 40" stroke="white" stroke-width="1.5" fill="none"/>
+          <path d="M26 12C30 17 33 21.5 33 26C33 30.5 30 35 26 40" stroke="white" stroke-width="1.5" fill="none"/>
+          <path d="M12 26H40" stroke="white" stroke-width="1.5"/>
+          <path d="M13.5 19.5H38.5M13.5 32.5H38.5" stroke="white" stroke-width="1" stroke-dasharray="3 2"/>
+          <circle cx="26" cy="26" r="3" fill="white"/>
+          <circle cx="33" cy="18" r="2" fill="#00E5FF"/>
+          <circle cx="20" cy="33" r="1.5" fill="#00E5FF"/>
+          <line x1="26" y1="26" x2="33" y2="18" stroke="#00E5FF" stroke-width="1" stroke-dasharray="2 1"/>
+          <defs>
+            <linearGradient id="logoGrad" x1="0" y1="0" x2="52" y2="52" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#0F4C81"/>
+              <stop offset="100%" stop-color="#1a6ebd"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <h1>TRACKJF</h1>
+        <p>Sistemas de Rastreo y Ubicación Satelital</p>
+      </div>
+    </div>
+
+    <div class="select-country-card">
+      <h2>Acceso al Sistema</h2>
+      <p class="subtitle">Ingresa a tu plataforma de administrador</p>
+      <div class="country-grid" style="grid-template-columns: 1fr;">
+        <a href="ve/login.html" class="country-btn" id="btn-ve" style="max-width: 320px; margin: 0 auto;">
+          <div class="flag-icon flag-ve">
+            <svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+              <rect width="60" height="13.33" y="0" fill="#CF142B"/>
+              <rect width="60" height="13.33" y="13.33" fill="#003893"/>
+              <rect width="60" height="13.33" y="26.67" fill="#CE1126"/>
+              <g transform="translate(30,20)">
+                <ellipse cx="0" cy="0" rx="9" ry="6" fill="none" stroke="#FFD700" stroke-width="1"/>
+                <circle cx="-6.4" cy="-2" r="1.1" fill="#FFD700"/>
+                <circle cx="-3.8" cy="-5.5" r="1.1" fill="#FFD700"/>
+                <circle cx="0" cy="-6.5" r="1.1" fill="#FFD700"/>
+                <circle cx="3.8" cy="-5.5" r="1.1" fill="#FFD700"/>
+                <circle cx="6.4" cy="-2" r="1.1" fill="#FFD700"/>
+                <circle cx="6.4" cy="2" r="1.1" fill="#FFD700"/>
+                <circle cx="3.8" cy="5.5" r="1.1" fill="#FFD700"/>
+              </g>
+            </svg>
+          </div>
+          <span class="country-name">Plataforma Venezuela</span>
+          <span class="country-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="bottom-tagline">
+      <div class="signal-dot"></div>
+      <span>Sistema activo · Cobertura 24/7</span>
+    </div>
+  </div>
+
+  <!-- No scripts needed for landing -->
+</body>
+</html>

@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRACKJF - Panel de Administración</title>
+  <meta name="description" content="Panel de administración TRACKJF - Sistema de rastreo GPS satelital de flotas vehicles">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <!-- Leaflet Maps -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- HLS playback for .m3u8 camera streams -->
+  <script src="https://unpkg.com/hls.js@1.5.18/dist/hls.min.js"></script>
+  <style>
+    #realMap { width:100%; height:100%; min-height:400px; }
+    #historyMap { width:100%; height:100%; }
+    #geofenceMap { width:100%; height:100%; }
+    .leaflet-container { font-family: 'Inter', sans-serif; }
+    .vehicle-popup { font-family: 'Inter', sans-serif; min-width:180px; }
+    .vehicle-popup h4 { margin:0 0 6px; font-size:13px; color:#0F4C81; font-weight:700; }
+    .vehicle-popup p { margin:3px 0; font-size:11px; color:#555; }
+    .speed-gauge { display:inline-block; background:#0F4C81; color:#fff; padding:3px 10px; border-radius:10px; font-size:11px; font-weight:700; margin-top:6px; }
+  </style>
+</head>
+<body>
+  <!-- Auth Guard -->
+  <script>
+    if (!sessionStorage.getItem('trackjf_loggedIn')) {
+      window.location.href = 've/login.html';
+    }
+  </script>
+
+  <div class="app-layout">
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo-icon">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+            <circle cx="18" cy="18" r="18" fill="url(#sbGrad)"/>
+            <circle cx="18" cy="18" r="10" stroke="white" stroke-width="1.2" fill="none"/>
+            <path d="M18 8C15.5 11.5 14 14.5 14 18C14 21.5 15.5 24.5 18 28" stroke="white" stroke-width="1.2" fill="none"/>
+            <path d="M18 8C20.5 11.5 22 14.5 22 18C22 21.5 20.5 24.5 18 28" stroke="white" stroke-width="1.2" fill="none"/>
+            <path d="M8 18H28" stroke="white" stroke-width="1.2"/>
+            <circle cx="18" cy="18" r="2.5" fill="white"/>
+            <circle cx="23" cy="13" r="2" fill="#00C9FF"/>
+            <defs>
+              <linearGradient id="sbGrad" x1="0" y1="0" x2="36" y2="36">
+                <stop offset="0%" stop-color="#0F4C81"/>
+                <stop offset="100%" stop-color="#1a6ebd"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="sidebar-logo-text">
+          <h2>TRACKJF</h2>
+          <span>GPS · Administración</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Principal</div>
+        <div class="nav-item active" data-page="dashboard" id="nav-dashboard">
+          <span class="nav-icon">🗺️</span>
+          <span>Mapa en Vivo</span>
+        </div>
+        <div class="nav-item" data-page="vehicles" id="nav-vehicles">
+          <span class="nav-icon">🚗</span>
+          <span>Vehículos</span>
+          <span class="nav-badge" id="badge-vehicles">12</span>
+        </div>
+        <div class="nav-item" data-page="alerts" id="nav-alerts">
+          <span class="nav-icon">🔔</span>
+          <span>Alertas</span>
+          <span class="nav-badge danger" id="badge-alerts">3</span>
+        </div>
+
+        <div class="nav-section-title">Gestión</div>
+        <div class="nav-item" data-page="clients" id="nav-clients">
+          <span class="nav-icon">👥</span>
+          <span>Clientes</span>
+        </div>
+        <div class="nav-item" data-page="devices" id="nav-devices">
+          <span class="nav-icon">📡</span>
+          <span>Dispositivos GPS</span>
+        </div>
+        <div class="nav-item" data-page="meitrack" id="nav-meitrack">
+          <span class="nav-icon">🛠️</span>
+          <span>Meitrack Manager</span>
+        </div>
+        <div class="nav-item" data-page="drivers" id="nav-drivers">
+          <span class="nav-icon">🧑‍✈️</span>
+          <span>Conductores</span>
+        </div>
+        <div class="nav-item" data-page="geofences" id="nav-geofences">
+          <span class="nav-icon">📐</span>
+          <span>Geocercas</span>
+        </div>
+
+        <div class="nav-section-title">Telemática</div>
+        <div class="nav-item" data-page="cameras" id="nav-cameras">
+          <span class="nav-icon">📷</span>
+          <span>Cámaras en Vivo</span>
+          <span class="nav-badge" style="background:var(--danger);color:#fff;">●</span>
+        </div>
+        <div class="nav-item" data-page="telemetry" id="nav-telemetry">
+          <span class="nav-icon">📈</span>
+          <span>Telemetría</span>
+        </div>
+
+        <div class="nav-section-title">Reportes</div>
+        <div class="nav-item" data-page="reports" id="nav-reports">
+          <span class="nav-icon">📊</span>
+          <span>Reportes</span>
+        </div>
+        <div class="nav-item" data-page="history" id="nav-history">
+          <span class="nav-icon">🕐</span>
+          <span>Historial de Rutas</span>
+        </div>
+        <div class="nav-item" data-page="events" id="nav-events">
+          <span class="nav-icon">⚡</span>
+          <span>Eventos</span>
+          <span class="nav-badge warning">7</span>
+        </div>
+
+        <div class="nav-section-title">Sistema</div>
+        <div class="nav-item" data-page="users" id="nav-users">
+          <span class="nav-icon">👤</span>
+          <span>Usuarios del Sistema</span>
+        </div>
+        <div class="nav-item" data-page="settings" id="nav-settings">
+          <span class="nav-icon">⚙️</span>
+          <span>Configuración</span>
+        </div>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-card" id="userCard">
+          <div class="user-avatar" id="userAvatar">CJ</div>
+          <div class="user-info">
+            <h4 id="userName">corporacionjf</h4>
+            <span>Administrador</span>
+          </div>
+          <button class="user-menu-btn" id="logoutBtn" title="Cerrar sesión">⏻</button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ============ TOPBAR ============ -->
+    <header class="topbar">
+      <button class="topbar-btn" id="mobileMenuBtn" title="Menú">☰</button>
+      <h1 class="topbar-title" id="pageTitle">Mapa en Vivo</h1>
+
+      <div class="topbar-search">
+        <span class="search-icon">🔍</span>
+        <input type="text" placeholder="Buscar vehículo, placa..." id="globalSearch">
+      </div>
+
+      <div class="topbar-actions">
+        <button class="topbar-btn" id="refreshBtn" title="Actualizar">🔄</button>
+        <button class="topbar-btn" id="notifBtn" title="Notificaciones">
+          🔔
+          <span class="notif-count" id="notifCount">3</span>
+        </button>
+        <div class="country-indicator" title="País activo" style="display:flex;align-items:center;gap:6px;padding:6px 12px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:8px;">
+          <span id="countryFlag" style="font-size:18px;">🇻🇪</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============ MAIN CONTENT ============ -->
+    <main class="main-content">
+
+      <!-- ==================== PAGE: DASHBOARD / MAP ==================== -->
+      <div class="page active" id="page-dashboard">
+        <div class="stats-grid">
+          <div class="stat-card" style="--accent-color: #00C9FF;">
+            <span class="stat-icon">🚗</span>
+            <div class="stat-value" id="stat-total">12</div>
+            <div class="stat-label">Vehículos Totales</div>
+            <div class="stat-change up">↑ 2 este mes</div>
+          </div>
+          <div class="stat-card" style="--accent-color: #2ed573;">
+            <span class="stat-icon">✅</span>
+            <div class="stat-value" id="stat-moving">7</div>
+            <div class="stat-label">En Movimiento</div>
+            <div class="stat-change up">↑ activos ahora</div>
+          </div>
+          <div class="stat-card" style="--accent-color: #FFA502;">
+            <span class="stat-icon">🅿️</span>
+            <div class="stat-value" id="stat-parked">3</div>
+            <div class="stat-label">Estacionados</div>
+            <div class="stat-change" style="color:var(--text-muted);">Sin cambios</div>
+          </div>
+          <div class="stat-card" style="--accent-color: #FF4757;">
+            <span class="stat-icon">📵</span>
+            <div class="stat-value" id="stat-offline">2</div>
+            <div class="stat-label">Sin Señal</div>
+            <div class="stat-change down">↓ 1 desde ayer</div>
+          </div>
+        </div>
+
+        <div class="dashboard-grid">
+          <!-- Map -->
+          <div class="map-container" id="mapContainer">
+            <div id="realMap"></div>
+            <div class="map-controls">
+              <button class="map-ctrl-btn" id="mapZoomIn" title="Acercar">+</button>
+              <button class="map-ctrl-btn" id="mapZoomOut" title="Alejar">−</button>
+              <button class="map-ctrl-btn" id="mapCenter" title="Centrar todo">⊙</button>
+              <button class="map-ctrl-btn" id="mapSatellite" title="Vista satélite">🛰</button>
+              <button class="map-ctrl-btn" id="mapFullscreen" title="Pantalla completa">⛶</button>
+            </div>
+            <div class="map-legend">
+              <div class="legend-item"><div class="legend-dot" style="background:#2ed573;box-shadow:0 0 6px #2ed573;"></div>En movimiento</div>
+              <div class="legend-item"><div class="legend-dot" style="background:#FFA502;box-shadow:0 0 6px #FFA502;"></div>Estacionado</div>
+              <div class="legend-item"><div class="legend-dot" style="background:#FF4757;box-shadow:0 0 6px #FF4757;"></div>Sin señal</div>
+            </div>
+          </div>
+
+          <!-- Vehicle List Panel -->
+          <div class="card" style="max-height:450px;overflow:hidden;display:flex;flex-direction:column;">
+            <div class="card-header">
+              <div class="card-title"><span class="card-icon">🚗</span> Flota en Tiempo Real</div>
+              <div class="card-actions">
+                <button class="btn-sm ghost" id="filterAllBtn">Todos</button>
+              </div>
+            </div>
+            <div class="card-body" style="overflow-y:auto;flex:1;padding:12px;">
+              <div class="vehicle-list" id="vehicleListPanel"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom row - Activity & Chart-->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:0;">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title"><span class="card-icon">⚡</span> Actividad Reciente</div>
+            </div>
+            <div class="card-body">
+              <div class="activity-feed" id="activityFeed"></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title"><span class="card-icon">📊</span> Eventos por Día</div>
+              <div class="card-actions">
+                <select class="filter-select" style="padding:4px 24px 4px 8px;font-size:12px;" id="chartRange">
+                  <option>Últimos 7 días</option>
+                  <option>Últimas 2 semanas</option>
+                  <option>Este mes</option>
+                </select>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="chart-bars" id="eventChart"></div>
+              <div style="display:flex;justify-content:center;gap:16px;margin-top:12px;font-size:11px;color:var(--text-muted);">
+                <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;background:var(--primary-light);border-radius:2px;display:inline-block;"></span>Velocidad</span>
+                <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;background:var(--accent2);border-radius:2px;display:inline-block;"></span>Geocercas</span>
+                <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;background:var(--danger);border-radius:2px;display:inline-block;"></span>Alertas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== PAGE: VEHICLES ==================== -->
+      <div class="page" id="page-vehicles">
+        <div class="page-header">
+          <div class="page-header-left">
+            <h2>🚗 Gestión de Vehículos</h2>
+            <p>Administra todos los vehículos de la flota</p>
+          </div>
+          <button class="btn primary" id="addVehicleBtn">+ Agregar Vehículo</button>
+        </div>
+        <div class="filters-bar">
+          <div class="search-input">
+            <span class="search-icon">🔍</span>
+            <input type="text" placeholder="Buscar por placa, nombre, modelo..." id="vehicleSearch">
+          </div>
+          <select class="filter-select" id="vehicleStatusFilter">
+            <option value="">Todos los estados</option>
+            <option value="moving">En movimiento</option>
+            <option value="parked">Estacionado</option>
+            <option value="offline">Sin señal</option>
+          </select>
+          <select class="filter-select" id="vehicleClientFilter">
+            <option value="">Todos los clientes</option>
+          </select>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title"><span class="card-icon">📋</span> Lista de Vehículos</div>
+            <div class="card-actions">
+              <button class="btn-sm ghost" id="exportVehiclesBtn">📥 Exportar</button>
+            </div>
+          </div>
+          <div style="overflow-x:auto;">
+            <table class="data-table" id="vehiclesTable">
+              <thead>
+                <tr>
+                  <th>Placa</th>
+                  <th>Descripción</th>
+                  <th>Cliente</th>
+                  <th>Dispositivo</th>
+                  <th>Estado</th>
+                  <th>Velocidad</th>
+                  <th>Última Posición</th>
+                  <th>Última Señal</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody id="vehiclesTbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== PAGE: ALERTS ==================== -->
+      <div class="page" id="page-alerts">
+        <div class="page-header">
+          <div class="page-header-left">
+            <h2>🔔 Centro de Alertas</h2>
+            <p>Monitoreo de alertas y notificaciones del sistema</p>
+          </div>
+          <div style="display:flex;gap:10px;">
+            <button class="btn ghost" id="markAllReadBtn">✔ Marcar todo leído</button>
+            <button class="btn primary" id="configAlertsBtn">⚙ Configurar Alertas</button>
+          </div>
+        </div>
+        <div class="stats-grid" style="grid-template-columns:repeat(5,1fr);">
+          <div class="stat-card" style="--accent-color:#FF4757;">
+            <span class="stat-icon">⚡</span>
+            <div class="stat-value">3</div>
+            <div class="stat-label">Alertas Activas</div>
+          </div>
+          <div class="stat-card" style="--accent-color:#FFA502;">
+            <span class="stat-icon">🚨</span>
+            <div class="stat-value">1</div>
+            <div class="stat-label">Pánico</div>
+          </div>
+          <div class="stat-card" style="--accent-color:#FFA502;">
+            <span class="stat-icon">⚡</span>
+            <div class="stat-value">5</div>
+            <div class="stat-label">Exceso Velocidad</div>
+          </div>
+          <div class="stat-card" style="--accent-color:#00C9FF;">
+            <span class="stat-icon">📐</span>
+            <div class="stat-value">2</div>
+            <div class="stat-label">Geocerca</div>
+          </div>
+          <div class="stat-card" style="--accent-color:#2ed573;">
+            <span class="stat-icon">✅</span>
+            <div class="stat-value">18</div>
+            <div class="stat-label">Resueltas Hoy</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title"><span class="card-icon">🔔</span> Alertas Recientes</div>
+            <div class="card-actions">
+              <select class="filter-select" style="font-size:12px;padding:4px 24px 4px 8px;" id="alertTypeFilter">
+                <option value="">Todos los tipos</option>
+                <option value="speed">Velocidad</option>
+                <option value="geofence">Geocerca</option>
+                <option value="panic">Pánico</option>
+                <option value="disconnect">Desconexión</option>
+                <option value="battery">Batería</option>
+              </select>
+            </div>
+          </div>
+          <div style="overflow-x:auto;">
+            <table class="data-table" id="alertsTable">
+              <thead>
+                <tr>
+                  <th>Tipo</th>
+                  <th>Vehículo</th>
+                  <th>Descripción</th>
+                  <th>Fecha/Hora</th>
+                  <th>Estado</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody id="alertsTbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== PAGE: CLIENTS ==================== -->
+      <div class="page" id="page-clients">
+        <div class="page-header">
+          <div class="page-header-left">
+            <h2>👥 Gestión de Clientes</h2>
+            <p>Administra los clientes del sistema de rastreo</p>
+          </div>
+          <button class="btn primary" id="addClientBtn">+ Agregar Cliente</button>
+        </div>
+        <div class="filters-bar">
+          <div class="search-input">
+            <span class="search-icon">🔍</span>
+            <input type="text" placeholder="Buscar cliente..." id="clientSearch">
+          </div>
+          <select class="filter-select" id="clientStatusFilter">
+            <option value="">Todos</option>
+            <option value="active">Activos</option>
+            <option value="inactive">Inactivos</option>
+          </select>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title"><span class="card-icon">📋</span> Lista de Clientes</div>
+            <div class="card-actions">
+              <button class="btn-sm ghost" id="exportClientsBtn">📥 Exportar</button>
+            </div>
+          </div>
+          <div style="overflow-x:auto;">
+            <table class="data-table" id="clientsTable">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Nombre / Empresa</th>
+                  <th>RIF / Cédula</th>
+                  <th>Teléfono</th>
+                  <th>Email</th>
+                  <th>Vehículos</th>
+                  <th>Estado</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody id="clientsTbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== PAGE: DEVICES ==================== -->
+      <div class="page" id="page-devices">
+        <div class="page-header">
+          <div class="page-header-left">
+            <h2>📡 Dispositivos GPS</h2>
+            <p>Gestión de rastreadores y equipos GPS instalados</p>
+          </div>
+          <button class="btn primary" id="addDeviceBtn">+ Agregar Dispositivo</button>
+        </div>
+        <div class="filters-bar">
+          <div class="search-input">
+            <span class="search-icon">🔍</span>
+            <input type="text" placeholder="Buscar por IMEI, número SIM..." id="deviceSearch">
+          </div>
+          <select class="filter-select" id="deviceTypeFilter">
+            <option value="">Todos los modelos</option>
+            <option value="TK103">TK103</option>
+            <option value="GT06">GT06</option>
+            <option value="MVT380">MVT380</option>
+            <option value="Teltonika">Teltonika</option>
+          </select>
+          <select class="filter-select" id="deviceStatusFilter">
+            <option value="">Todos los estados</option>
+            <option value="active">Activo</option>
+            <option value="inactive">Inactivo</option>
+            <option value="pending">Pendiente</option>
+          </select>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title"><span class="card-icon">📡</span> Inventario de Dispositivos</div>
+          </div>
+          <div style="overflow-x:auto;">
+            <table class="data-table" id="devicesTable">
+              <thead>
+                <tr>
+                  <th>IMEI</th>
+                  <th>Modelo</th>
+                  <th>N° SIM</th>
+                  <th>Operadora</th>
+                  <th>Vehículo Asignado</th>
+                  <th>Última Señal</th>
+                  <th>Batería</th>
+                  <th>Estado</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody id="devicesTbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== PAGE: MEITRACK MANAGER ==================== -->
+      <div class="page" id="page-meitrack">
+        <div class="page-header">
+          <div class="page-header-left">
+            <h2>🛠️ Meitrack Manager</h2>
+            <p>Configuración avanzada y terminal de comandos para dispositivos Meitrack</p>
+          </div>
+          <div style="display:flex;gap:10px;">
+            <button class="btn ghost" id="meitrackConnectBtn">🌐 Conectar Servidor</button>
+            <input type="file" id="mtConfigFileInput" style="display:none;" accept=".mcf">
+            <button class="btn ghost" onclick="document.getElementById('mtConfigFileInput').click()">📂 Cargar .MCF</button>
+            <button class="btn primary" id="meitrackSyncBtn">🔄 Sincronizar</button>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:300px 1fr;gap:20px;">
+          <!-- Device Selection Sidebar -->
+          <div class="card" style="height:calc(100vh - 250px);display:flex;flex-direction:column;">
+            <div class="card-header">
+              <div class="card-title">Dispositivos</div>
+            </div>
+            <div class="card-body" style="overflow-y:auto;padding:10px;" id="meitrackDeviceList">
+              <!-- Meitrack devices will be listed here -->
+            </div>
+          </div>
+
+          <!-- Main Configuration Panel -->
+          <div class="card" style="height:calc(100vh - 250px);display:flex;flex-direction:column;">
+            <div id="meitrackEmptyState" style="flex:1;display:flex;align-items:center;justify-content:center;flex-direction:column;color:var(--text-muted);opacity:0.6;">
+              <span style="font-size:48px;margin-bottom:16px;">📡</span>
+              <p>Seleccione un dispositivo Meitrack para comenzar</p>
+            </div>
+            
+            <div id="meitrackMainPanel" style="display:none;flex:1;flex-direction:column;overflow:hidden;">
+              <div class="card-header" style="background:rgba(255,255,255,0.02);border-bottom:1px solid var(--border);">
+                <div style="display:flex;justify-content:space-between;width:100%;align-items:center;">
+                  <div>
+                    <strong id="mtActiveDeviceName">Dispositivo</strong>
+                    <div id="mtActiveDeviceIMEI" style="font-size:11px;color:var(--text-muted);">IMEI: —</div>
+                  </div>
+                  <div class="status-badge active" id="mtActiveStatus">● Online</div>
+                </div>
+              </div>
+
+              <!-- Tabs Header -->
+              <div style="display:flex;background:rgba(0,0,0,0.2);border-bottom:1px solid var(--border);">
+                <button class="mt-tab active" data-tab="status">Estado</button>
+                <button class="mt-tab" data-tab="commands">Terminal de Comandos</button>
+                <button class="mt-tab" data-tab="config">Parámetros</button>
+              </div>
+
+              <!-- Tab Contents -->
+              <div style="flex:1;overflow-y:auto;padding:20px;" id="mtTabContainer">
+                <!-- Status Tab -->
+                <div class="mt-tab-content active" id="mt-tab-status">
+                  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+                    <div class="config-section">
+                      <h5>Entradas / Salidas</h5>
+                      <div class="mt-io-grid">
+                        <div class="mt-io-item"><span class="mt-io-label">ACC</span> <span class="status-badge active">ON</span></div>
+                        <div class="mt-io-item"><span class="mt-io-label">Input 2</span> <span class="status-badge">OFF</span></div>
+                        <div class="mt-io-item"><span class="mt-io-label">Output 1 (Relay)</span> <span class="status-badge active">Locked</span></div>
+                        <div class="mt-io-item"><span class="mt-io-label">Panic Button</span> <span class="status-badge">Normal</span></div>
+                      </div>
+                    </div>
+                    <div class="config-section">
+                      <h5>Sensores y Telemetría</h5>
+                      <div class="mt-io-grid">
+                        <div class="mt-io-item"><span class="mt-io-label">Batería Interna</span> <span style="color:var(--success)">4.15V (95%)</span></div>
+                        <div class="mt-io-item"><span class="mt-io-label">Voltaje Planta</span> <span style="color:var(--accent)">13.8V</span></div>
+                        <div class="mt-io-item"><span class="mt-io-label">GSM Signal</span> <span style="color:var(--success)">Excelente (-65 dBm)</span></div>
+                        <div class="mt-io-item"><span class="mt-io-label">Satélites</span> <span style="color:var(--accent)">14</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Commands Tab -->
+                <div class="mt-tab-content" id="mt-tab-commands" style="display:none;">
+                  <div style="background:#0a0f1e;border-radius:8px;padding:15px;font-family:monospace;font-size:12px;color:#2ed573;height:250px;overflow-y:auto;border:1px solid var(--border);margin-bottom:15px;" id="mtConsole">
+                    <div>[SYSTEM] Terminal listo para enviar comandos Meitrack protocol...</div>
+                  </div>
+                  <div style="display:flex;gap:10px;">
+                    <input type="text" class="form-control" placeholder="Escriba un comando (ej: B05)" id="mtCommandInput" style="background:rgba(255,255,255,0.05);color:#fff;border-color:var(--border);">
+                    <button class="btn primary" id="mtSendBtn">Enviar</button>
+                  </div>
+                  <div style="margin-top:20px;">
+                    <h6>Comandos Rápidos</h6>
+                    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;">
+                      <button class="btn-sm ghost" onclick="sendQuickCommand('B05')">Get Position (B05)</button>
+                      <button class="mt-quick-btn" onclick="sendQuickCommand('C01,1')">Stop Engine (C01)</button>
+                      <button class="mt-quick-btn" onclick="sendQuickCommand('C01,0')">Resume Engine (C01)</button>
+                      <button class="mt-quick-btn" onclick="sendQuickCommand('A10')">Read Config (A10)</button>
+                      <button class="mt-quick-btn danger" onclick="simulatePanicAlert()" style="margin-left:auto;border-color:var(--danger);color:var(--danger);">🚨 Simular Pánico</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Config Tab -->
+                <div class="mt-tab-content" id="mt-tab-config" style="display:none;">
+                   <div class="form-group" style="margin-bottom:15px;">
+                      <label>Intervalo de Reporte (Seg)</label>
+                      <input type="number" class="form-control" value="30" id="mtCfgInterval">
+                   </div>
+                   <div class="form-group" style="margin-bottom:15px;">
+                      <label>IP Servidor GPRS</label>
+                      <input type="text" class="form-control" value="104.248.122.34" id="mtCfgIp">
+                   </div>
+                   <div class="form-group" style="margin-bottom:15px;">
+                      <label>Puerto</label>
+                      <input type="number" class="form-control" value="5004" id="mtCfgPort">
+                   </div>
+                   <button class="btn primary" id="mtSaveConfigBtn">Guardar en Dispositivo</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== PAGE: DRIVERS ==================== -->
+      <div class="page" id="page-drivers">
+        <div class="page-header">
+          <div class="page-header-left">
+            <h2>🧑‍✈️ Conductores</h2>
+            <p>Registro y control de conductores de la flota</p>
+          </div>
+          <button class="btn primary" id="addDriverBtn">+ Agregar Conductor</button>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title"><span class="card-icon">📋</span> Lista de Conductores</div>
+          </div>
+          <div style="overflow-x:auto;">
+            <table class="data-table" id="driversTable">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Cédula / DNI</th>
+                  <th>Licencia</th>
+                  <th>Teléfono</th>
+                  <th>Vehículo Asignado</th>
+                  <th>Estado</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody id="driversTbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== PAGE: GEOFENCES ==================== -->
+      <div class="page" id="page-geofences">
+        <div class="page-header">
+          <div class="page-header-left">
+            <h2>📐 Geocercas</h2>
+            <p>Define zonas de control para tu flota de vehículos</p>
+          </div>
+          <button class="btn primary" id="addGeofenceBtn">+ Nueva Geocerca</button>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 360px;gap:20px;">
+          <div class="map-container" style="height:500px;">
+            <div id="geofenceMap" style="width:100%;height:100%;"></div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title"><span class="card-icon">📋</span> Geocercas Activas</div>
+            </div>
+            <div class="card-body" style="overflow-y:auto;max-height:430px;">
+              <div id="geofenceList" style="display:flex;flex-direction:column;gap:8px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== PAGE: REPORTS ==================== -->
+      <div class="page" id="page-reports">
+        <div class="page-header">
+          <div class="page-header-left">
+            <h2>📊 Reportes y Estadísticas</h2>
+            <p>Genera reportes detallados de tu flota</p>
+          </div>
+        </div>
+        <div class="report-cards">
+          <div class="report-card" data-report="route">
+            <div class="rc-icon">🗺️</div>
+            <h4>Reporte de Ruta</h4>
+            <p>Historial completo del recorrido de un vehículo</p>
+          </div>
+          <div class="report-card" data-report="speed">
+            <div class="rc-icon">⚡</div>
+            <h4>Exceso de Velocidad</h4>
+            <p>Registro de infracciones de velocidad</p>
+          </div>
+          <div class="report-card" data-report="stop">
+            <div class="rc-icon">🅿️</div>
+            <h4>Paradas y Tiempos</h4>
+            <p>Análisis de tiempo detenido por vehículo</p>
+          </div>
+          <div class="report-card" data-report="geofence">
+            <div class="rc-icon">📐</div>
+            <h4>Eventos de Geocerca</h4>
+            <p>Entradas y salidas de zonas definidas</p>
+          </div>
+          <div class="report-card" data-report="mileage">
+            <div class="rc-icon">🛣️</div>
+            <h4>Kilometraje</h4>
+            <p>Distancia recorrida por vehículo en el período</p>
+          </div>
+          <div class="report-card" data-report="fuel">
+            <div class="rc-icon">⛽</div>
+            <h4>Consumo de Combustible</h4>
+            <p>Estimado de consumo basado en recorrido</p>
+          </div>
+          <div class="report-card" data-report="alerts">
+            <div class="rc-icon">🔔</div>
+            <h4>Reporte de Alertas</h4>
+            <p>Todas las alertas generadas en el período</p>
+          </div>
+          <div class="report-card" data-report="summary">
+            <div class="rc-icon">📋</div>
+            <h4>Resumen de Flota</h4>
+            <p>Estado general consolidado de todos los vehículos</p>
+          </div>
+          <div class="report-card" data-report="idle">
+            <div class="rc-icon">💤</div>
+            <h4>Tiempo Inactivo</h4>
+            <p>Vehículos encendidos sin movimiento</p>
+          </div>
+        </div>
+        <!-- Report generator form -->
+        <div class="card" id="reportGeneratorCard" style="display:none;">
+          <div class="card-header">
+            <div class="card-title" id="reportGenTitle">Generar Reporte</div>
+            <div class="card-actions">
+              <button class="btn-sm ghost" id="closeReportGen">✕ Cerrar</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Vehículo</label>
+                <select class="form-control filter-select" id="reportVehicle" style="width:100%;">
+                  <option value="all">Todos los vehículos</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Período</label>
+                <select class="form-control filter-select" id="reportPeriod" style="width:100%;">
+                  <option>Hoy</option>
+                  <option>Ayer</option>
+                  <option>Últimos 7 días</option>
+                  <option>Este mes</option>
+                  <option>Personalizado</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Fecha Inicio</label>
+                <input type="date" class="form-control" id="reportDateFrom" style="padding:10px 14px;">
+              </div>
+              <div class="form-group">
+                <label>Fecha Fin</label>
+                <input type="date" class="form-control" id="reportDateTo" style="padding:10px 14px;">
+              </div>
+            </div>
+            <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:8px;">
+              <button class="btn ghost" id="exportPDFBtn">📄 Exportar PDF</button>
+              <button class="btn ghost" id="exportXLSBtn">📊 Exportar Excel</button>
+              <button class="btn primary" id="generateReportBtn">🔍 Generar Reporte</button>
+            </div>
+          </div>
+        </div>
+        <!-- Report results (table) -->
+        <div class="card" id="reportResultCard" style="display:none;margin-top:20px;">
+          <div class="card-header">
+            <div class="card-title" id="reportResultTitle">Resultados</div>
+          </div>
+          <div style="overflow-x:auto;">
+            <table class="data-table" id="reportTable">
+              <thead id="reportTableHead"></thead>
+              <tbody id="reportTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== PAGE: HISTORY ==================== -->
+      <div class="page" id="page-history">
+        <div class="page-header">
+          <div class="page-header-left">
+            <h2>🕐 Historial de Rutas</h2>
+            <p>Reproduce el recorrido histórico de cualquier vehículo</p>
+          </div>
+        </div>
+        <div class="card" style="margin-bottom:20px;">
+          <div class="card-body">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Vehículo</label>
+                <select class="form-control filter-select" id="historyVehicle" style="width:100%;"></select>
+              </div>
+              <div class="form-group">
+                <label>Fecha Inicio</label>
+                <input type="date" class="form-control" id="historyDateFrom" style="padding:10px 14px;">
+              </div>
+              <div class="form-group">
+                <label>Hora Inicio</label>
+                <input type="time" class="form-control" id="historyTimeFrom" style="padding:10px 14px;" value="00:00">
+              </div>
+              <div class="form-group">
+                <label>Fecha Fin</label>
+                <input type="date" class="form-control" id="historyDateTo" style="padding:10px 14px;">
+              </div>
+              <div class="form-group">
+                <label>Hora Fin</label>
+                <input type="time" class="form-control" id="historyTimeTo" style="padding:10px 14px;" value="23:59">
+              </div>
+            </div>
+            <div style="display:flex;gap:10px;justify-content:flex-end;">
+              <button class="btn primary" id="loadHistoryBtn">▶ Cargar Recorrido</button>
+            </div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 320px;gap:20px;">
+          <div class="map-container" style="height:460px;">
+            <div id="historyMap" style="width:100%;height:100%;"></div>
+            <!-- Playback controls -->
+            <div style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);background:rgba(10,15,30,0.9);border:1px solid var(--border);border-radius:10px;padding:10px 20px;display:flex;gap:12px;align-items:center;z-index:5;backdrop-filter:blur(10px);">
+              <button class="map-ctrl-btn" id="playBtn" style="width:36px;height:36px;font-size:18px;">▶</button>
+              <button class="map-ctrl-btn" id="pauseBtn" style="width:36px;height:36px;font-size:18px;">⏸</button>
+              <button class="map-ctrl-btn" id="stopBtn" style="width:36px;height:36px;font-size:18px;">⏹</button>
+              <input type="range" id="speedSlider" min="1" max="10" value="3" style="width:100px;accent-color:var(--accent);">
+              <span style="font-size:12px;color:var(--text-muted);">Velocidad: <span id="speedVal">3x</span></span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">📍 Puntos del Recorrido</div>
+            </div>
+            <div class="card-body" style="overflow-y:auto;max-height:400px;">
+              <div id="historyPoints" style="font-size:12px;color:var(--text-muted);">
+                Selecciona un vehículo y período para ver el recorrido
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== PAGE: EVENTS ==================== -->
+      <div class="page" id="page-events">
+        <div class="page-header">
+          <div class="page-header-left">
+            <h2>⚡ Registro de Eventos</h2>
+            <p>Todos los eventos y actividades del sistema</p>
+          </div>
+          <button class="btn ghost" id="exportEventsBtn">📥 Exportar</button>
+        </div>
+        <div class="filters-bar">
+          <div class="search-input">
+            <span class="search-icon">🔍</span>
+            <input type="text" placeholder="Buscar evento..." id="eventSearch">
+          </div>
+          <select class="filter-select" id="eventTypeFilter">
+            <option value="">Todos los tipos</option>
+            <option value="ignition_on">Motor Encendido</option>
+            <option value="ignition_off">Motor Apagado</option>
+            <option value="speed">Exceso Velocidad</option>
+            <option value="geofence_in">Entrada Geocerca</option>
+            <option value="geofence_out">Salida Geocerca</option>
+            <option value="panic">Pánico</option>
+            <option value="disconnect">Desconexión</option>
+          </select>
+          <input type="date" class="filter-select" id="eventDateFilter">
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title"><span class="card-icon">📋</span> Eventos del Sistema</div>
+          </div>
+          <div style="overflow-x:auto;">
+            <table class="data-table" id="eventsTable">
+              <thead>
+                <tr>
+                  <th>Tipo</th>
+                  <th>Vehículo</th>
+                  <th>Conductor</th>
+                  <th>Descripción</th>
+                  <th>Ubicación</th>
+                  <th>Velocidad</th>
+                  <th>Fecha/Hora</th>
+                </tr>
+              </thead>
+              <tbody id="eventsTbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== PAGE: CAMERAS ==================== -->
+      <div class="page" id="page-cameras">
+        <div class="page-header">
+          <div class="page-header-left">
+            <h2>📷 Cámaras Telemáticas en Vivo</h2>
+            <p>Monitoreo visual en tiempo real de la flota vehicular</p>
+          </div>
+          <div style="display:flex;gap:10px;">
+            <button class="btn ghost" id="cam2x2Btn">⊞ 2×2</button>
+            <button class="btn ghost" id="cam1x1Btn">⊡ Pantalla completa</button>
+            <button class="btn primary" id="camSnapshotBtn">📸 Capturar todos</button>
+            <button class="btn secondary" id="camAutoLinkBtn">🔗 Auto-vínculo Carlos Tracking</button>
+            <button class="btn warning" id="camLocalMd300Btn">📡 Conectar MD300 Local</button>
+          </div>
+        </div>
+
+        <!-- Status ribbon -->
+        <div class="status-ribbon">
+          <div class="ribbon-item"><div class="ribbon-dot"></div> Sistema de cámaras activo</div>
+          <div class="ribbon-item">📷 <strong id="cam-active-count">8</strong> cámaras conectadas</div>
+          <div class="ribbon-item">📡 Protocolo: RTSP / WebRTC</div>
+          <div class="ribbon-item">🔐 Cifrado E2E activo</div>
+          <div class="ribbon-item">🌐 Servidor: trackjf-cam.local</div>
+        </div>
+
+        <!-- Vehicle selector for camera -->
+        <div style="display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap;" id="camVehicleSelector"></div>
+
+        <div style="display:grid;grid-template-columns:1fr 320px;gap:20px;">
+          <!-- Camera grid -->
+          <div>
+            <div class="camera-grid" id="cameraGrid">
+              <!-- Camera feeds will be rendered by JS -->
+            </div>
+          </div>
+
+          <!-- ADAS Events Panel -->
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">⚠️ Eventos ADAS/DSM</div>
+              <div class="card-actions">
+                <button class="btn-sm ghost" id="clearAdasBtn">Limpiar</button>
+              </div>
+            </div>
+            <div class="card-body" style="overflow-y:auto;max-height:500px;">
+              <div class="adas-events" id="adasEventList"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== PAGE: TELEMETRY ==================== -->
+      <div class="page" id="page-telemetry">
+        <div class="page-header">
+          <div class="page-header-left">
+            <h2>📈 Telemetría Vehicular</h2>
+            <p>Datos en tiempo real de sensores y condición de los vehículos</p>
+          </div>
+          <div style="display:flex;gap:10px;">
+            <select class="filter-select" id="telemetryVehicleSel"></select>
+            <button class="btn ghost" id="exportTelemetryBtn">📥 Exportar</button>
+          </div>
+        </div>
+
+        <div class="stats-grid" style="grid-template-columns:repeat(6,1fr);margin-bottom:24px;">
+          <div class="stat-card" style="--accent-color:#00C9FF;">
+            <span class="stat-icon">⚡</span>
+            <div class="stat-value" id="tel-speed">67</div>
+            <div class="stat-label">Velocidad (km/h)</div>
+          </div>
+          <div class="stat-card" style="--accent-color:#2ed573;">
+            <span class="stat-icon">🌡️</span>
+            <div class="stat-value" id="tel-temp">85</div>
+            <div class="stat-label">Temp. Motor (°C)</div>
+          </div>
+          <div class="stat-card" style="--accent-color:#FFA502;">
+            <span class="stat-icon">⛽</span>
+            <div class="stat-value" id="tel-fuel">68</div>
+            <div class="stat-label">Combustible (%)</div>
+          </div>
+          <div class="stat-card" style="--accent-color:#FF4757;">
+            <span class="stat-icon">🔋</span>
+            <div class="stat-value" id="tel-battery">12.4</div>
+            <div class="stat-label">Voltaje (V)</div>
+          </div>
+          <div class="stat-card" style="--accent-color:#00E5A8;">
+            <span class="stat-icon">🛣️</span>
+            <div class="stat-value" id="tel-odometer">45,321</div>
+            <div class="stat-label">Odómetro (km)</div>
+          </div>
+          <div class="stat-card" style="--accent-color:#a78bfa;">
+            <span class="stat-icon">📶</span>
+            <div class="stat-value" id="tel-signal">4G</div>
+            <div class="stat-label">Señal</div>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px;">
+          <div class="card">
+            <div class="card-header"><div class="card-title">⚡ Velocímetro</div></div>
+            <div class="card-body">
+              <div class="speed-gauge-widget">
+                <div class="gauge-circle" id="speedGauge" style="--pct:0%">
+                  <div class="gauge-inner">
+                    <div class="gauge-value" id="gaugeSpeedVal">67</div>
+                    <div class="gauge-unit">km/h</div>
+                  </div>
+                </div>
+                <div style="margin-top:16px;display:flex;gap:20px;font-size:12px;color:var(--text-muted);">
+                  <span>Mín: 0</span>
+                  <span style="color:var(--accent);font-weight:700;">Actual: <span id="gaugeSpeedCurrent">67</span> km/h</span>
+                  <span>Máx: 200</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header"><div class="card-title">🔧 Estado del Vehículo</div></div>
+            <div class="card-body">
+              <div class="telemetry-grid">
+                <div class="telemetry-item">
+                  <div class="telemetry-value" style="color:var(--success)">ON</div>
+                  <div class="telemetry-label">Encendido</div>
+                </div>
+                <div class="telemetry-item">
+                  <div class="telemetry-value" style="color:var(--success)">OK</div>
+                  <div class="telemetry-label">Motor</div>
+                </div>
+                <div class="telemetry-item">
+                  <div class="telemetry-value" style="color:var(--warning)">85°C</div>
+                  <div class="telemetry-label">Temperatura</div>
+                </div>
+                <div class="telemetry-item">
+                  <div class="telemetry-value" style="color:var(--accent)">12.4V</div>
+                  <div class="telemetry-label">Voltaje</div>
+                </div>
+                <div class="telemetry-item">
+                  <div class="telemetry-value" style="color:var(--accent2)">68%</div>
+                  <div class="telemetry-label">Combustible</div>
+                </div>
+                <div class="telemetry-item">
+                  <div class="telemetry-value">4G</div>
+                  <div class="telemetry-label">Señal GSM</div>
+                </div>
+                <div class="telemetry-item">
+                  <div class="telemetry-value" style="color:var(--success)">Fix</div>
+                  <div class="telemetry-label">GPS</div>
+                </div>
+                <div class="telemetry-item">
+                  <div class="telemetry-value">0.3G</div>
+                  <div class="telemetry-label">Aceleración</div>
+                </div>
+                <div class="telemetry-item">
+                  <div class="telemetry-value" style="color:var(--success)">Normal</div>
+                  <div class="telemetry-label">Frenos</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Signal & position info -->
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;">
+          <div class="card">
+            <div class="card-header"><div class="card-title">📡 Señal GPS</div></div>
+            <div class="card-body">
+              <div class="info-grid">
+                <div class="info-item"><div class="info-item-label">Latitud</div><div class="info-item-value" id="tel-lat">10.4806°</div></div>
+                <div class="info-item"><div class="info-item-label">Longitud</div><div class="info-item-value" id="tel-lng">-66.9036°</div></div>
+                <div class="info-item"><div class="info-item-label">Satélites</div><div class="info-item-value" style="color:var(--success)">12</div></div>
+                <div class="info-item"><div class="info-item-label">Precisión (m)</div><div class="info-item-value">2.4</div></div>
+                <div class="info-item"><div class="info-item-label">Altitud</div><div class="info-item-value">920 m</div></div>
+                <div class="info-item"><div class="info-item-label">Dirección</div><div class="info-item-value">NE 045°</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header"><div class="card-title">📶 Señal Celular</div></div>
+            <div class="card-body">
+              <div class="info-grid">
+                <div class="info-item"><div class="info-item-label">Operadora</div><div class="info-item-value">Movistar VE</div></div>
+                <div class="info-item"><div class="info-item-label">Tecnología</div><div class="info-item-value" style="color:var(--accent)">4G LTE</div></div>
+                <div class="info-item"><div class="info-item-label">RSSI</div><div class="info-item-value">-78 dBm</div></div>
+                <div class="info-item"><div class="info-item-label">Calidad</div><div class="info-item-value" style="color:var(--success)">Buena</div></div>
+                <div class="info-item"><div class="info-item-label">Datos TX</div><div class="info-item-value">1.2 MB</div></div>
+                <div class="info-item"><div class="info-item-label">Datos RX</div><div class="info-item-value">0.4 MB</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header"><div class="card-title">🧠 Estado del Dispositivo</div></div>
+            <div class="card-body">
+              <div class="info-grid">
+                <div class="info-item"><div class="info-item-label">Firmware</div><div class="info-item-value">v2.4.1</div></div>
+                <div class="info-item"><div class="info-item-label">Memoria libre</div><div class="info-item-value">62%</div></div>
+                <div class="info-item"><div class="info-item-label">Uptime</div><div class="info-item-value">14h 32m</div></div>
+                <div class="info-item"><div class="info-item-label">T. interno</div><div class="info-item-value">42°C</div></div>
+                <div class="info-item"><div class="info-item-label">Voltaje ext.</div><div class="info-item-value">12.4V</div></div>
+                <div class="info-item"><div class="info-item-label">Batería int.</div><div class="info-item-value" style="color:var(--success)">92%</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== PAGE: USERS ==================== -->
+      <div class="page" id="page-users">
+        <div class="page-header">
+          <div class="page-header-left">
+            <h2>👤 Usuarios del Sistema</h2>
+            <p>Gestión de accesos y permisos de usuarios</p>
+          </div>
+          <button class="btn primary" id="addUserBtn">+ Agregar Usuario</button>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title"><span class="card-icon">📋</span> Lista de Usuarios</div>
+          </div>
+          <div style="overflow-x:auto;">
+            <table class="data-table" id="usersTable">
+              <thead>
+                <tr>
+                  <th>Usuario</th>
+                  <th>Nombre Completo</th>
+                  <th>Email</th>
+                  <th>Rol</th>
+                  <th>Cliente</th>
+                  <th>Último Acceso</th>
+                  <th>Estado</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody id="usersTbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== PAGE: SETTINGS ==================== -->
+      <div class="page" id="page-settings">
+        <div class="page-header">
+          <div class="page-header-left">
+            <h2>⚙️ Configuración del Sistema</h2>
+            <p>Parámetros generales y preferencias de la plataforma</p>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+          <div class="card">
+            <div class="card-header"><div class="card-title">🏢 Información de la Empresa</div></div>
+            <div class="card-body">
+              <form class="modal-form" id="companyForm">
+                <div class="form-group"><label>Nombre de la Empresa</label><input type="text" class="form-control" value="CorporaciónJF" id="companyName"></div>
+                <div class="form-group"><label>RIF / NIT</label><input type="text" class="form-control" value="J-12345678-9" id="companyRif"></div>
+                <div class="form-group"><label>Teléfono</label><input type="text" class="form-control" value="+58 412-0000000" id="companyPhone"></div>
+                <div class="form-group"><label>Dirección</label><input type="text" class="form-control" value="Av. Principal, Caracas" id="companyAddress"></div>
+                <div class="form-group"><label>Email</label><input type="email" class="form-control" value="admin@corporacionjf.com" id="companyEmail"></div>
+                <button type="button" class="btn primary" id="saveCompanyBtn" style="margin-top:8px;">💾 Guardar Cambios</button>
+              </form>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header"><div class="card-title">🔔 Configuración de Alertas</div></div>
+            <div class="card-body">
+              <form class="modal-form" id="alertsConfigForm">
+                <div class="form-group"><label>Velocidad máxima (km/h)</label><input type="number" class="form-control" value="120" id="maxSpeed"></div>
+                <div class="form-group"><label>Tiempo inactivo (minutos)</label><input type="number" class="form-control" value="30" id="idleTime"></div>
+                <div class="form-group"><label>Email para alertas</label><input type="email" class="form-control" value="alertas@corporacionjf.com" id="alertEmail"></div>
+                <div class="form-group"><label>Alertas por SMS</label>
+                  <select class="form-control" style="padding:10px 14px;">
+                    <option>Habilitado</option><option>Deshabilitado</option>
+                  </select>
+                </div>
+                <button type="button" class="btn primary" id="saveAlertsConfigBtn" style="margin-top:8px;">💾 Guardar Cambios</button>
+              </form>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header"><div class="card-title">🗺️ Configuración del Mapa</div></div>
+            <div class="card-body">
+              <form class="modal-form">
+                <div class="form-group"><label>Proveedor de mapas</label>
+                  <select class="form-control" style="padding:10px 14px;" id="mapProvider">
+                    <option>OpenStreetMap</option>
+                    <option>Google Maps</option>
+                    <option>Mapbox</option>
+                  </select>
+                </div>
+                <div class="form-group"><label>Zoom inicial</label><input type="number" class="form-control" value="12" min="1" max="20"></div>
+                <div class="form-group"><label>Intervalo de actualización (seg)</label><input type="number" class="form-control" value="30" min="10"></div>
+                <button type="button" class="btn primary" id="saveMapConfigBtn" style="margin-top:8px;">💾 Guardar Cambios</button>
+              </form>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header"><div class="card-title">🔐 Cambiar Contraseña</div></div>
+            <div class="card-body">
+              <form class="modal-form" id="changePassForm">
+                <div class="form-group"><label>Contraseña Actual</label><input type="password" class="form-control" placeholder="••••••••"></div>
+                <div class="form-group"><label>Nueva Contraseña</label><input type="password" class="form-control" placeholder="••••••••"></div>
+                <div class="form-group"><label>Confirmar Contraseña</label><input type="password" class="form-control" placeholder="••••••••"></div>
+                <button type="button" class="btn primary" id="changePassBtn" style="margin-top:8px;">🔐 Actualizar Contraseña</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main><!-- end main-content -->
+  </div><!-- end app-layout -->
+
+  <!-- ==================== MODALS ==================== -->
+
+  <!-- Add Vehicle Modal -->
+  <div class="modal-overlay" id="vehicleModal">
+    <div class="modal">
+      <div class="modal-header">
+        <div class="modal-title" id="vehicleModalTitle">➕ Agregar Vehículo</div>
+        <button class="modal-close" data-modal="vehicleModal">✕</button>
+      </div>
+      <div class="modal-body">
+        <form class="modal-form" id="vehicleForm">
+          <div class="form-row">
+            <div class="form-group"><label>Placa *</label><input type="text" class="form-control" id="vf-plate" placeholder="AB-123-CD" required></div>
+            <div class="form-group"><label>Descripción</label><input type="text" class="form-control" id="vf-desc" placeholder="Ej: Camión de carga"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Marca</label><input type="text" class="form-control" id="vf-brand" placeholder="Toyota"></div>
+            <div class="form-group"><label>Modelo</label><input type="text" class="form-control" id="vf-model" placeholder="Hilux"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Año</label><input type="number" class="form-control" id="vf-year" placeholder="2020" min="1990" max="2030"></div>
+            <div class="form-group"><label>Color</label><input type="text" class="form-control" id="vf-color" placeholder="Blanco"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Cliente *</label>
+              <select class="form-control" id="vf-client">
+                <option value="">Seleccionar cliente...</option>
+              </select>
+            </div>
+            <div class="form-group"><label>Dispositivo GPS</label>
+              <select class="form-control" id="vf-device">
+                <option value="">Sin dispositivo</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Velocidad máxima (km/h)</label><input type="number" class="form-control" id="vf-maxspeed" value="120"></div>
+            <div class="form-group"><label>Conductor asignado</label>
+              <select class="form-control" id="vf-driver">
+                <option value="">Sin asignar</option>
+              </select>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn ghost" data-modal="vehicleModal">Cancelar</button>
+        <button class="btn primary" id="saveVehicleBtn">💾 Guardar Vehículo</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Client Modal -->
+  <div class="modal-overlay" id="clientModal">
+    <div class="modal">
+      <div class="modal-header">
+        <div class="modal-title" id="clientModalTitle">➕ Agregar Cliente</div>
+        <button class="modal-close" data-modal="clientModal">✕</button>
+      </div>
+      <div class="modal-body">
+        <form class="modal-form" id="clientForm">
+          <div class="form-row">
+            <div class="form-group"><label>Nombre / Empresa *</label><input type="text" class="form-control" id="cf-name" required></div>
+            <div class="form-group"><label>RIF / Cédula *</label><input type="text" class="form-control" id="cf-rif"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Teléfono</label><input type="text" class="form-control" id="cf-phone"></div>
+            <div class="form-group"><label>Email</label><input type="email" class="form-control" id="cf-email"></div>
+          </div>
+          <div class="form-row single">
+            <div class="form-group"><label>Dirección</label><input type="text" class="form-control" id="cf-address"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>País</label>
+              <select class="form-control" id="cf-country">
+                <option value="ve">Venezuela</option>
+                <option value="co">Colombia</option>
+              </select>
+            </div>
+            <div class="form-group"><label>Estado / Departamento</label><input type="text" class="form-control" id="cf-state"></div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn ghost" data-modal="clientModal">Cancelar</button>
+        <button class="btn primary" id="saveClientBtn">💾 Guardar Cliente</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Device Modal -->
+  <div class="modal-overlay" id="deviceModal">
+    <div class="modal">
+      <div class="modal-header">
+        <div class="modal-title">➕ Agregar Dispositivo GPS</div>
+        <button class="modal-close" data-modal="deviceModal">✕</button>
+      </div>
+      <div class="modal-body">
+        <form class="modal-form" id="deviceForm">
+          <div class="form-row">
+            <div class="form-group"><label>IMEI *</label><input type="text" class="form-control" id="df-imei" required></div>
+            <div class="form-group"><label>Modelo *</label>
+              <select class="form-control" id="df-model">
+                <option>TK103</option><option>GT06</option><option>MVT380</option>
+                <option>Teltonika FMB920</option><option>Coban 403</option><option>Otro</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Número SIM</label><input type="text" class="form-control" id="df-sim"></div>
+            <div class="form-group"><label>Operadora</label>
+              <select class="form-control" id="df-carrier">
+                <option>Movistar</option><option>Digitel</option><option>Movilnet</option>
+                <option>Claro</option><option>Tigo</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Contraseña del Dispositivo</label><input type="text" class="form-control" id="df-pass" value="123456"></div>
+            <div class="form-group"><label>Puerto del Servidor</label><input type="text" class="form-control" id="df-port" value="5001"></div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn ghost" data-modal="deviceModal">Cancelar</button>
+        <button class="btn primary" id="saveDeviceBtn">💾 Guardar Dispositivo</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add User Modal -->
+  <div class="modal-overlay" id="userModal">
+    <div class="modal">
+      <div class="modal-header">
+        <div class="modal-title">➕ Agregar Usuario</div>
+        <button class="modal-close" data-modal="userModal">✕</button>
+      </div>
+      <div class="modal-body">
+        <form class="modal-form" id="userForm">
+          <div class="form-row">
+            <div class="form-group"><label>Usuario *</label><input type="text" class="form-control" id="uf-username" required></div>
+            <div class="form-group"><label>Nombre Completo *</label><input type="text" class="form-control" id="uf-name" required></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Email</label><input type="email" class="form-control" id="uf-email"></div>
+            <div class="form-group"><label>Contraseña *</label><input type="password" class="form-control" id="uf-password" required></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Rol *</label>
+              <select class="form-control" id="uf-role">
+                <option value="admin">Administrador</option>
+                <option value="operator">Operador</option>
+                <option value="viewer">Solo Lectura</option>
+                <option value="client">Cliente</option>
+              </select>
+            </div>
+            <div class="form-group"><label>Cliente Asignado</label>
+              <select class="form-control" id="uf-client">
+                <option value="">Sin cliente específico</option>
+              </select>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn ghost" data-modal="userModal">Cancelar</button>
+        <button class="btn primary" id="saveUserBtn">💾 Guardar Usuario</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Driver Modal -->
+  <div class="modal-overlay" id="driverModal">
+    <div class="modal">
+      <div class="modal-header">
+        <div class="modal-title">➕ Agregar Conductor</div>
+        <button class="modal-close" data-modal="driverModal">✕</button>
+      </div>
+      <div class="modal-body">
+        <form class="modal-form" id="driverForm">
+          <div class="form-row">
+            <div class="form-group"><label>Nombre Completo *</label><input type="text" class="form-control" id="drv-name" required></div>
+            <div class="form-group"><label>Cédula / DNI *</label><input type="text" class="form-control" id="drv-cedula" required></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Número de Licencia</label><input type="text" class="form-control" id="drv-license"></div>
+            <div class="form-group"><label>Vencimiento Licencia</label><input type="date" class="form-control" id="drv-licexp" style="padding:10px 14px;"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Teléfono</label><input type="text" class="form-control" id="drv-phone"></div>
+            <div class="form-group"><label>Vehículo Asignado</label>
+              <select class="form-control" id="drv-vehicle">
+                <option value="">Sin asignar</option>
+              </select>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn ghost" data-modal="driverModal">Cancelar</button>
+        <button class="btn primary" id="saveDriverBtn">💾 Guardar Conductor</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Geofence Modal -->
+  <div class="modal-overlay" id="geofenceModal">
+    <div class="modal">
+      <div class="modal-header">
+        <div class="modal-title">📐 Nueva Geocerca</div>
+        <button class="modal-close" data-modal="geofenceModal">✕</button>
+      </div>
+      <div class="modal-body">
+        <form class="modal-form" id="geofenceForm">
+          <div class="form-group"><label>Nombre de la Geocerca *</label><input type="text" class="form-control" id="gf-name" required placeholder="Ej: Almacén Principal"></div>
+          <div class="form-row">
+            <div class="form-group"><label>Tipo</label>
+              <select class="form-control" id="gf-type">
+                <option>Círculo</option><option>Polígono</option><option>Rectángulo</option>
+              </select>
+            </div>
+            <div class="form-group"><label>Radio (metros) - solo círculo</label><input type="number" class="form-control" id="gf-radius" value="500" min="50"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Alerta al Entrar</label>
+              <select class="form-control" id="gf-enter">
+                <option>Sí</option><option>No</option>
+              </select>
+            </div>
+            <div class="form-group"><label>Alerta al Salir</label>
+              <select class="form-control" id="gf-exit">
+                <option>Sí</option><option>No</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group"><label>Color</label>
+            <input type="color" value="#00C9FF" id="gf-color" style="width:60px;height:36px;border:none;background:none;cursor:pointer;">
+          </div>
+          <p style="font-size:12px;color:var(--text-muted);margin-top:8px;">📌 Haz clic en el mapa para definir la ubicación de la geocerca</p>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn ghost" data-modal="geofenceModal">Cancelar</button>
+        <button class="btn primary" id="saveGeofenceBtn">💾 Crear Geocerca</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile App Bottom Navigation -->
+  <nav class="mobile-nav">
+    <button class="mobile-nav-item nav-item active" data-page="dashboard"><div class="mobile-nav-icon">📍</div><div class="mobile-nav-label">Mapa</div></button>
+    <button class="mobile-nav-item nav-item" data-page="vehicles"><div class="mobile-nav-icon">🚗</div><div class="mobile-nav-label">Flota</div></button>
+    <button class="mobile-nav-item nav-item" data-page="cameras"><div class="mobile-nav-icon">📷</div><div class="mobile-nav-label">Cámaras</div></button>
+    <button class="mobile-nav-item nav-item" data-page="alerts"><div class="mobile-nav-icon">🔔</div><div class="mobile-nav-label">Alertas</div></button>
+    <button class="mobile-nav-item" onclick="document.getElementById('sidebar').classList.add('open')"><div class="mobile-nav-icon">☰</div><div class="mobile-nav-label">Menú</div></button>
+  </nav>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRACKJF - Acceso Super Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    /* Super Admin Theme Overrides */
+    :root {
+      --primary: #1E1E2F;
+      --primary-gradient: linear-gradient(135deg, #11111A 0%, #2A2A40 100%);
+      --accent: #E5A93C; /* Premium Gold Accent */
+      --accent-hover: #C58F2C;
+    }
+    
+    body.login-page {
+      background: var(--primary-gradient);
+    }
+    
+    .login-left {
+      background: rgba(17, 17, 26, 0.7);
+      border-right: 1px solid rgba(229, 169, 60, 0.2);
+    }
+    
+    .login-logo svg path,
+    .login-logo svg circle {
+      stroke: var(--accent);
+    }
+    
+    .login-logo svg circle[fill="white"] {
+      fill: var(--accent);
+    }
+    
+    .login-logo p {
+      color: #A0A0B0;
+    }
+
+    .feature-icon {
+      background: rgba(229, 169, 60, 0.1);
+      border: 1px solid rgba(229, 169, 60, 0.3);
+    }
+
+    .badge-superadmin {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      background: rgba(229, 169, 60, 0.15);
+      border: 1px solid rgba(229, 169, 60, 0.4);
+      border-radius: 20px;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.85rem;
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    
+    .btn-login {
+      background: linear-gradient(135deg, #E5A93C 0%, #C58F2C 100%);
+      box-shadow: 0 4px 15px rgba(229, 169, 60, 0.3);
+      color: #111;
+      font-weight: 700;
+    }
+
+    .btn-login:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(229, 169, 60, 0.4);
+    }
+
+    .input-wrapper .form-control:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 4px rgba(229, 169, 60, 0.1);
+    }
+
+    .form-control {
+      background: rgba(30, 30, 47, 0.6);
+      border-color: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+    
+    .form-control::placeholder {
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    .input-icon { color: rgba(255, 255, 255, 0.5); }
+    label { color: #ECECF1; }
+
+    .login-form-container h2 {
+      color: #FFF;
+    }
+    
+    .particle {
+      background: rgba(229, 169, 60, 0.2);
+    }
+  </style>
+</head>
+<body class="login-page">
+  <div class="bg-animated">
+    <div class="particle"></div><div class="particle"></div>
+    <div class="particle"></div><div class="particle"></div>
+    <div class="particle"></div><div class="particle"></div>
+    <div class="particle"></div><div class="particle"></div>
+  </div>
+  
+  <div class="login-left">
+    <div class="login-logo">
+      <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+        <circle cx="32" cy="32" r="32" fill="url(#lladmin)"/>
+        <circle cx="32" cy="32" r="18" stroke-width="1.5" fill="none"/>
+        <path d="M32 14C27 20 24 26 24 32C24 38 27 44 32 50" stroke-width="1.5" fill="none"/>
+        <path d="M32 14C37 20 40 26 40 32C40 38 37 44 32 50" stroke-width="1.5" fill="none"/>
+        <path d="M14 32H50" stroke-width="1.5"/>
+        <circle cx="32" cy="32" r="4" fill="white"/>
+        <defs>
+          <linearGradient id="lladmin" x1="0" y1="0" x2="64" y2="64">
+            <stop offset="0%" stop-color="#11111A"/>
+            <stop offset="100%" stop-color="#2A2A40"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <h1 style="color: #fff;">TRACKJF <span style="color: var(--accent);">PRO</span></h1>
+      <p>Centro de Administración Central (SaaS)</p>
+    </div>
+    
+    <div class="login-features">
+      <div class="login-feature">
+        <div class="feature-icon">🏢</div>
+        <div class="feature-text"><h4 style="color: #fff;">Gestión de Clientes</h4><p>Administra múltiples empresas e inquilinos</p></div>
+      </div>
+      <div class="login-feature">
+        <div class="feature-icon">🔑</div>
+        <div class="feature-text"><h4 style="color: #fff;">Control de Accesos</h4><p>Crea administradores para cada empresa</p></div>
+      </div>
+      <div class="login-feature">
+        <div class="feature-icon">📈</div>
+        <div class="feature-text"><h4 style="color: #fff;">Métricas Globales</h4><p>Supervisa todos los vehículos y conexiones</p></div>
+      </div>
+      <div class="login-feature">
+        <div class="feature-icon">🛡️</div>
+        <div class="feature-text"><h4 style="color: #fff;">Alta Seguridad</h4><p>Entorno aislado y privado para The TrackJF Company</p></div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="login-right">
+    <div class="login-form-container" style="background: rgba(30, 30, 47, 0.4); border: 1px solid rgba(255,255,255,0.05); backdrop-filter: blur(20px);">
+      <div class="badge-superadmin">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+        Super Admin
+      </div>
+      <h2>Acceso Maestro</h2>
+      <p class="form-subtitle">Portal exclusivo para operadores de TrackJF</p>
+      
+      <div class="login-error" id="loginError">⚠️ Credenciales maestras incorrectas. Intenta de nuevo.</div>
+      
+      <form id="loginForm" autocomplete="off">
+        <div class="form-group">
+          <label for="username">Usuario Maestro</label>
+          <div class="input-wrapper">
+            <input type="text" class="form-control" id="username" placeholder="Ingresa tu usuario root" required>
+            <span class="input-icon">👑</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password">Clave de Seguridad</label>
+          <div class="input-wrapper">
+            <input type="password" class="form-control" id="password" placeholder="Ingresa tu clave maestra" required>
+            <span class="input-icon">🗝️</span>
+            <button type="button" class="toggle-password" id="togglePass"><span id="eyeIcon">👁️</span></button>
+          </div>
+        </div>
+        
+        <button type="submit" class="btn-login" id="loginBtn">
+          <span id="loginBtnText">Ingresar al Sistema Central</span>
+        </button>
+      </form>
+      
+      <a href="../index.html" class="back-link" style="color: var(--accent);">← Regresar a Portal de Clientes</a>
+    </div>
+  </div>
+
+  <script src="../assets/js/data.js"></script>
+  <script>
+    document.getElementById('togglePass').addEventListener('click', function() {
+      const pwd = document.getElementById('password');
+      const icon = document.getElementById('eyeIcon');
+      pwd.type = pwd.type === 'password' ? 'text' : 'password';
+      icon.textContent = pwd.type === 'password' ? '👁️' : '🙈';
+    });
+
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const user = document.getElementById('username').value.trim();
+      const pass = document.getElementById('password').value;
+      const btn = document.getElementById('loginBtn');
+      const btnText = document.getElementById('loginBtnText');
+      const error = document.getElementById('loginError');
+
+      error.classList.remove('show');
+      btnText.textContent = 'Autenticando...';
+      btn.disabled = true;
+
+      // Mock de seguridad: Aceptar combinaciones para SuperAdmin
+      setTimeout(() => {
+        // En un sistema real esto va al API (ej. /api/auth/superadmin)
+        if (user === 'admin' || user === 'trackjf') {
+          sessionStorage.setItem('trackjf_user', user);
+          sessionStorage.setItem('trackjf_role', 'superadmin');
+          sessionStorage.setItem('trackjf_loggedIn', '1');
+          window.location.href = 'dashboard.html';
+        } else {
+          error.classList.add('show');
+          btnText.textContent = 'Ingresar al Sistema Central';
+          btn.disabled = false;
+        }
+      }, 900);
+    });
+  </script>
+</body>
+</html>
