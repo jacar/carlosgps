@@ -1,0 +1,17 @@
+/node_modules
+/public/storage
+/storage/*.key
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+docker-compose.override.yml
+user.ini
+*.sqlite
+/trackjf_laravel/vendor
+/trackjf_laravel/node_modules
+/trackjf_laravel/storage/*.log
+/trackjf_laravel/storage/framework/cache/data/*
+/trackjf_laravel/storage/framework/sessions/*
+/trackjf_laravel/storage/framework/testing/*
+/trackjf_laravel/storage/framework/views/*
