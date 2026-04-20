@@ -41,7 +41,7 @@
     </div>
     <div class="header-actions">
         <button class="btn btn-outline-light me-2">📂 Cargar .MCF</button>
-        <button class="btn btn-primary">🔄 Leer Configuración</button>
+        <button class="btn btn-primary" onclick="testServerConnection()">📡 Conectar Servidor</button>
     </div>
 </div>
 
@@ -177,6 +177,27 @@
         
         // Highlight active
         document.querySelectorAll('.list-group-item').forEach(el => el.classList.remove('active'));
+    }
+
+    async function testServerConnection() {
+        logToTerminal('Intentando conectar con el servidor de rastreo (Traccar)...');
+        const startTime = Date.now();
+        
+        try {
+            const response = await fetch('/gps-proxy?endpoint=devices');
+            if (response.ok) {
+                const duration = Date.now() - startTime;
+                logToTerminal(`[OK] Conexión establecida con éxito.`, 'success');
+                logToTerminal(`[INFO] Servidor: Demo 3 (Traccar)`, 'info');
+                logToTerminal(`[INFO] Latencia: ${duration}ms`, 'info');
+                alert('¡Conexión Exitosa! El servidor de rastreo está respondiendo correctamente.');
+            } else {
+                throw new Error('Error de respuesta');
+            }
+        } catch (e) {
+            logToTerminal(`[ERROR] No se pudo establecer conexión con el servidor.`, 'error');
+            alert('Error: El servidor de rastreo no responde. Verifique el proxy.');
+        }
     }
 
     async function saveVehicleTechData() {
