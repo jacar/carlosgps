@@ -3,7 +3,7 @@ const { spawn } = require('child_process');
 function startTunnel() {
   console.log('--- Iniciando Conexión del Túnel (TrackJF) ---');
   // Usamos subdomain fijo para que tu URL nunca cambie, si está disponible.
-  const tunnelProcess = spawn('npx.cmd', ['--yes', 'localtunnel', '--port', '5173', '--subdomain', 'trackjf-pro-demo'], { stdio: 'pipe', shell: true });
+  const tunnelProcess = spawn('npx.cmd', ['--yes', 'localtunnel', '--port', '8082', '--subdomain', 'trackjf-pro-demo'], { stdio: 'pipe', shell: true });
 
   tunnelProcess.stdout.on('data', (data) => {
     const output = data.toString();

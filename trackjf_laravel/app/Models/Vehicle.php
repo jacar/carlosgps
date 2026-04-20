@@ -19,7 +19,9 @@ class Vehicle extends Model
         'status',
         'last_lat',
         'last_lng',
-        'last_speed'
+        'last_speed',
+        'sim_number',
+        'sim_carrier'
     ];
 
     /**

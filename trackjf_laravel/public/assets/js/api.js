@@ -60,7 +60,7 @@ class TrackjfAPI {
         ]);
 
         if (!positions || !devices) {
-            this.useSimulatedFallback = false; // NEVER fake data anymore
+            this.useSimulatedFallback = true;
             return;
         }
 

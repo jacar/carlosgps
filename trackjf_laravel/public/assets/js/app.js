@@ -1431,8 +1431,9 @@
     if (offline) offline.textContent = T.vehicles.filter(v => v.status === 'offline').length;
   }
 
-  // ---- Simulate vehicle movement (DISABLED per user request) ----
+  // ---- Simulate vehicle movement ----
   function simulateVehicleMovement() {
+    T.vehicles.forEach(v => {
       if (v.status === 'moving') {
         v.lat += (Math.random() - 0.5) * 0.002;
         v.lng += (Math.random() - 0.5) * 0.002;
@@ -1973,16 +1974,7 @@
       (d.imei && d.imei.startsWith('865468'))
     );
 
-    list.innerHTML = `
-      <div class="mt-device-item" onclick="document.getElementById('meitrackEmptyState').style.display='none'; document.getElementById('meitrackMainPanel').style.display='flex'; document.getElementById('mtActiveDeviceName').innerText='MD300 Principal';">
-        <div class="mt-device-icon">📡</div>
-        <div class="mt-device-info">
-          <div class="mt-device-name">MD300 Principal</div>
-          <div class="mt-device-imei">Haga clic para editar IMEI</div>
-        </div>
-        <div class="status-dot active"></div>
-      </div>
-    ` + meitrackDevices.map(d => {
+    list.innerHTML = meitrackDevices.map(d => {
       const v = T.getVehicle(d.vehicleId);
       return `
         <div class="mt-device-item ${meitrackActiveDeviceId === d.id ? 'active' : ''}" onclick="window.selectMeitrackDevice(${d.id})">
