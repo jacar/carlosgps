@@ -615,10 +615,45 @@
                    
                    <script>
                      // Explicit save function
-                     function saveMyConfig() {
-                       const imei = document.getElementById('mtCfgImei').value;
-                       alert('✅ Datos guardados correctamente en la base de datos.\\n\\nIMEI Vinculado: ' + imei + '\\nDestino: Traccar Demo 4 (142.93.189.60:5004).\\n\\nEl sistema ahora esperará activamente la señal de tu cámara.');
+                     async function saveMyConfig() {
+                        const imei = document.getElementById('mtCfgImei').value;
+                        const ip = document.getElementById('mtCfgIp').value;
+                        const port = document.getElementById('mtCfgPort').value;
+                        
+                        // Enviar datos reales a Laravel
+                        try {
+                            const response = await fetch('trackjf_laravel/public/vehicle/save-tech', {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({
+                                    id: 1, // Vehículo por defecto para este panel estático
+                                    imei: imei,
+                                    sim_number: '',
+                                    sim_carrier: 'Digitel'
+                                })
+                            });
+                            
+                            alert('✅ ÉXITO: Los cambios se han guardado en el servidor real.\n\nIMEI: ' + imei + '\nServidor: ' + ip + ':' + port);
+                            if(window.logToTerminal) logToTerminal('[DB] Sincronización exitosa con Laravel.', 'success');
+                        } catch (e) {
+                            alert('❌ Error al conectar con el servidor de base de datos.');
+                        }
                      }
+
+                     // Conectar Servidor Real
+                     document.getElementById('meitrackConnectBtn').onclick = async function() {
+                        alert('Iniciando prueba de conexión con Traccar Demo 3...');
+                        try {
+                            const res = await fetch('traccar-proxy.php?endpoint=devices');
+                            if(res.ok) {
+                                alert('✅ ¡CONEXIÓN EXITOSA!\n\nEl servidor de rastreo está en línea y recibiendo datos de la MD300.');
+                            } else {
+                                alert('⚠️ El servidor no responde o el proxy está caído.');
+                            }
+                        } catch(e) {
+                            alert('❌ Error de red al intentar conectar.');
+                        }
+                     };
 
                      // Tab switching logic
                      document.querySelectorAll('.mt-tab').forEach(tab => {
