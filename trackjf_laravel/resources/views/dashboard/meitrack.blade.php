@@ -128,10 +128,11 @@
                     </div>
 
                     <div class="mt-5 d-flex justify-content-between align-items-center pt-4 border-top border-secondary">
-                        <div class="text-muted small">Estado: <span class="text-success" id="sync-status">Sincronizado con local</span></div>
+                        <div class="text-muted small">Estado: <span class="text-success" id="sync-status">Sincronizado con base de datos</span></div>
                         <div class="d-flex gap-2">
+                            <button class="btn btn-outline-danger" onclick="deleteVehicle()">🗑️ Eliminar Equipo</button>
                             <button class="btn btn-outline-info" onclick="location.reload()">🔄 Refrescar</button>
-                            <button class="btn btn-primary px-4" onclick="saveVehicleTechData()">💾 Guardar Cambios Técnicos</button>
+                            <button class="btn btn-primary px-4" onclick="saveVehicleTechData()">💾 Guardar y Sincronizar</button>
                         </div>
                     </div>
                 </div>
@@ -139,7 +140,7 @@
                 <!-- Terminal Section -->
                 <div id="config-terminal" class="d-none mt-3">
                     <div class="terminal-window mb-3" id="mainTerminal">
-                        <div class="terminal-line"><span class="terminal-prefix">[09:21:45]</span> [CON] Conexión establecida con gateway 66.97.42.27</div>
+                        <div class="terminal-line"><span class="terminal-prefix">[09:21:45]</span> [CON] Conexión establecida con Gateway de Eventos</div>
                     </div>
                     <div class="input-group">
                         <span class="input-group-text bg-dark border-secondary text-success font-monospace">></span>
@@ -155,7 +156,7 @@
             <div class="card-body d-flex align-items-center gap-3">
                 <div class="fs-4">💡</div>
                 <div class="small text-muted">
-                    Utilice el comando <strong>A10</strong> para leer la configuración completa actual y <strong>B05</strong> para solicitar una posición inmediata. Todos los comandos se envían vía GPRS a través de la cola de Traccar.
+                    Vincule el IMEI correctamente para que la plataforma pueda jalar los datos de Traccar Demo 3. Si el equipo marca Offline, verifique el puerto 5020.
                 </div>
             </div>
         </div>
@@ -178,23 +179,57 @@
         document.querySelectorAll('.list-group-item').forEach(el => el.classList.remove('active'));
     }
 
-    function saveVehicleTechData() {
-        if (!selectedVehicleId) return alert('Por favor seleccione un vehículo');
+    async function saveVehicleTechData() {
+        if (!selectedVehicleId) return alert('Por favor seleccione un vehículo de la lista');
         
         const imei = document.getElementById('dev-imei').value;
         const sim = document.getElementById('simNumber').value;
         const operator = document.getElementById('sim-operator').value;
 
-        // Simulate Save (In production this would be an AJAX call to Laravel)
-        console.log(`Guardando: Vehículo ${selectedVehicleId}, IMEI: ${imei}, SIM: ${sim}`);
-        
-        const terminal = document.getElementById('mainTerminal');
-        const entry = document.createElement('div');
-        entry.className = 'terminal-line';
-        entry.innerHTML = `<span class="terminal-prefix">[${new Date().toLocaleTimeString()}]</span> <span style="color: #2ed573;">[DB] Cambios guardados localmente para ${imei}</span>`;
-        terminal.appendChild(entry);
-        
-        alert('Datos almacenados con éxito. La plataforma ahora buscará este IMEI en Traccar.');
+        try {
+            const response = await fetch('/vehicle/save-tech', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                },
+                body: JSON.stringify({
+                    id: selectedVehicleId,
+                    imei: imei,
+                    sim_number: sim,
+                    sim_carrier: operator
+                })
+            });
+
+            const res = await response.json();
+            if (res.success) {
+                logToTerminal(`[DB] ÉXITO: ${res.message}`, 'success');
+                alert(res.message);
+            }
+        } catch (e) {
+            logToTerminal(`[ERR] Error al guardar en base de datos`, 'error');
+        }
+    }
+
+    async function deleteVehicle() {
+        if (!selectedVehicleId) return alert('Seleccione un vehículo primero');
+        if (!confirm('¿Está seguro de eliminar este equipo permanentemente?')) return;
+
+        try {
+            const response = await fetch(`/vehicle/delete/${selectedVehicleId}`, {
+                method: 'POST',
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                }
+            });
+            const res = await response.json();
+            if (res.success) {
+                alert('Equipo eliminado correctamente');
+                location.reload();
+            }
+        } catch (e) {
+            alert('Error al eliminar');
+        }
     }
 
     function sendCommand(cmdCode) {

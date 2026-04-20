@@ -37,6 +37,38 @@ class DashboardController extends Controller
     }
 
     /**
+     * Save technical configuration for a vehicle
+     */
+    public function saveTechData(Request $request)
+    {
+        $request->validate([
+            'id' => 'required|exists:vehicles,id',
+            'imei' => 'required|string',
+            'sim_number' => 'nullable|string',
+            'sim_carrier' => 'nullable|string'
+        ]);
+
+        $vehicle = Vehicle::find($request->id);
+        $vehicle->update([
+            'imei' => $request->imei,
+            'sim_number' => $request->sim_number,
+            'sim_carrier' => $request->sim_carrier,
+        ]);
+
+        return response()->json(['success' => true, 'message' => 'Datos actualizados correctamente']);
+    }
+
+    /**
+     * Delete a vehicle from the system
+     */
+    public function deleteVehicle($id)
+    {
+        $vehicle = Vehicle::findOrFail($id);
+        $vehicle->delete();
+        return response()->json(['success' => true, 'message' => 'Vehículo eliminado']);
+    }
+
+    /**
      * Show advanced telemetry data
      */
     public function telemetry()

@@ -78,7 +78,10 @@ Route::get('/gps-proxy', function (Request $request) {
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/cameras', [DashboardController::class, 'cameras'])->name('cameras');
+    // Panel de Gestión Meitrack
     Route::get('/meitrack', [DashboardController::class, 'meitrack'])->name('meitrack');
+    Route::post('/vehicle/save-tech', [DashboardController::class, 'saveTechData'])->name('vehicle.save-tech');
+    Route::post('/vehicle/delete/{id}', [DashboardController::class, 'deleteVehicle'])->name('vehicle.delete');
     Route::get('/telemetry', [DashboardController::class, 'telemetry'])->name('telemetry');
 });
 
