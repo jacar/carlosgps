@@ -2171,4 +2171,47 @@
       if (e.target.id === 'mtCommandInput' && e.key === 'Enter') mtExecuteCommand();
   });
 
+  // ---- Real-time Data Sync Engine (Traccar) ----
+  const api = new TrackjfAPI();
+
+  async function syncGlobalData() {
+    try {
+      if (document.hidden) return; // Ahorrar recursos si la pestaña no está activa
+      
+      const devices = await api.fetchDevices();
+      const positions = await api.fetchPositions();
+
+      if (devices && positions) {
+        T.vehicles.forEach(v => {
+          const traccarDev = devices.find(d => d.uniqueId === v.imei || d.attributes.imei === v.imei);
+          if (traccarDev) {
+            const pos = positions.find(p => p.deviceId === traccarDev.id);
+            if (pos) {
+              v.lat = pos.latitude;
+              v.lng = pos.longitude;
+              v.speed = Math.floor(pos.speed * 1.852);
+              v.status = pos.speed > 0 ? 'moving' : 'parked';
+              v.lastSignal = new Date(pos.deviceTime).toLocaleTimeString();
+            }
+          }
+        });
+
+        // Refrescar solo si estamos viendo el mapa o la lista
+        if (currentPage === 'dashboard') {
+          if (window.renderMapMarkers) renderMapMarkers();
+          if (window.renderVehicleListPanel) renderVehicleListPanel();
+          if (window.hasOwnProperty('updateStats')) updateStats();
+        }
+      }
+    } catch (e) {
+      console.warn('[SYNC] Fallo en sincronización:', e);
+    }
+  }
+
+  // Sincronizar cada 10 segundos automáticamente
+  setInterval(syncGlobalData, 10000);
+  
+  // Primera carga inmediata
+  syncGlobalData();
+
 })();

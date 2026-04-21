@@ -4,14 +4,14 @@
  */
 
 const API_CONFIG = {
-    baseUrl: '/gpscarlos/traccar-proxy.php?endpoint=',
-    refreshInterval: 15000,
+    baseUrl: 'https://mecanicoenmedellin.com/gpscarlos/traccar-proxy.php?endpoint=',
+    refreshInterval: 5000,
 };
 
 class TrackjfAPI {
     constructor() {
-        // Credenciales Reales del Servidor Traccar
-        this.credentials = btoa('admin:admin'); 
+        // Credenciales Reales para Traccar Demo 3
+        this.credentials = btoa('ovalle_938@hotmail.com:Forastero_938'); 
         this.isConnecting = false;
         this.useSimulatedFallback = false;
         
