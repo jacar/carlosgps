@@ -95,12 +95,16 @@
                                     <small class="text-muted">Este número debe coincidir con el de Meitrack Manager.</small>
                                 </div>
                                 <div class="col-md-8 mt-4">
-                                    <label class="form-label text-muted small text-uppercase">IP del Servidor (Traccar)</label>
-                                    <input type="text" id="mt-ip" class="form-control bg-dark border-secondary text-white" value="142.93.189.60">
+                                    <label class="form-label text-muted small text-uppercase">IP del Servidor (Traccar Demo 3)</label>
+                                    <input type="text" id="mt-ip" class="form-control bg-dark border-secondary text-white" value="demo3.traccar.org">
                                 </div>
                                 <div class="col-md-4 mt-4">
-                                    <label class="form-label text-muted small text-uppercase">Puerto</label>
-                                    <input type="number" id="mt-port" class="form-control bg-dark border-secondary text-white" value="5004">
+                                    <label class="form-label text-muted small text-uppercase">Puerto MD300</label>
+                                    <input type="number" id="mt-port" class="form-control bg-dark border-secondary text-white" value="5020">
+                                </div>
+                                <div class="col-md-12 mt-4">
+                                    <label class="form-label text-muted small text-uppercase">APN Operadora (Digitel)</label>
+                                    <input type="text" id="mt-apn" class="form-control bg-dark border-secondary text-white" value="gprsweb.digitel.ve">
                                 </div>
                             </div>
                         </div>

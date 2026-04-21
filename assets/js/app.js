@@ -230,16 +230,22 @@
 
   function createVehicleIcon(v) {
     const color = getStatusColor(v.status);
-    const pulse = v.status === 'moving' ? `<circle cx="12" cy="12" r="10" fill="${color}" opacity="0.3"><animate attributeName="r" values="10;16;10" dur="2s" repeatCount="indefinite"/></circle>` : '';
+    const pulse = v.status === 'moving' ? `<circle cx="18" cy="18" r="16" fill="${color}" opacity="0.4"><animate attributeName="r" values="16;24;16" dur="1.5s" repeatCount="indefinite"/></circle>` : '';
+    const rotation = v.course || 0;
+    
     return L.divIcon({
-      html: `<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        ${pulse}
-        <circle cx="12" cy="12" r="8" fill="${color}"/>
-        <circle cx="12" cy="12" r="4" fill="white"/>
-      </svg>`,
-      iconSize: [24, 24],
-      iconAnchor: [12, 12],
-      className: ''
+      html: `<div style="transform: rotate(${rotation}deg); transition: transform 0.5s ease; width: 36px; height: 36px;">
+        <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.4));">
+          ${pulse}
+          <path d="M12 8 C12 6, 14 4, 18 4 C22 4, 24 6, 24 8 L24 28 C24 30, 22 32, 18 32 C14 32, 12 30, 12 28 Z" fill="${color}" stroke="#ffffff" stroke-width="2"/>
+          <path d="M13 11 C16 10, 20 10, 23 11 L22 15 L14 15 Z" fill="#1e293b" />
+          <path d="M14 26 C17 27, 19 27, 22 26 L21 23 L15 23 Z" fill="#1e293b" />
+        </svg>
+      </div>`,
+      iconSize: [36, 36],
+      iconAnchor: [18, 18],
+      popupAnchor: [0, -18],
+      className: 'vehicle-car-marker'
     });
   }
 
@@ -275,6 +281,9 @@
     vehicleMarkers.forEach(m => map.removeLayer(m));
     vehicleMarkers = [];
     T.vehicles.forEach(v => {
+      // Mostrar en el mapa SOLO los vehículos que están reportando en vivo desde Traccar
+      if (!v.hasRealData) return;
+
       const icon = createVehicleIcon(v);
       const client = T.getClient(v.clientId);
       const driver = (T.drivers || []).find(d => d.vehicleId === v.id);
@@ -1433,6 +1442,7 @@
 
   // ---- Simulate vehicle movement (DISABLED per user request) ----
   function simulateVehicleMovement() {
+    T.vehicles.forEach(v => {
       if (v.status === 'moving') {
         v.lat += (Math.random() - 0.5) * 0.002;
         v.lng += (Math.random() - 0.5) * 0.002;
@@ -1551,14 +1561,14 @@
 
     const isHls = /\.m3u8(\?|#|$)/i.test(url || '');
     
-    // Auto-apply proxy if enabled and it's a remote HTTP stream on an HTTPS site
+    // Auto-apply proxy if enabled (forces absolute production proxy URL to avoid CORS locally and Mixed Content on prod)
     let finalUrl = url;
-    if (USE_VIDEO_PROXY && url.startsWith('http://') && window.location.protocol === 'https:') {
-        // Extract filename from URL (e.g. from http://.../hls/123_1.m3u8 we want 123_1.m3u8)
+    if (USE_VIDEO_PROXY && url.startsWith('http://')) {
         const parts = url.split('/');
         const filename = parts[parts.length - 1];
-        finalUrl = `cam-proxy.php?file=${filename}`;
-        console.log(`[Video] Proxying stream: ${url} -> ${finalUrl}`);
+        // Enrutando todo siempre al proxy seguro en producción para evitar bloqueos
+        finalUrl = `https://mecanicoenmedellin.com/gpscarlos/cam-proxy.php?file=${filename}`;
+        console.log(`[Video] Proxying stream over HTTPS: ${url} -> ${finalUrl}`);
     }
 
     const HlsCtor = window.Hls;
@@ -1780,7 +1790,7 @@
 
   const VIDEO_SERVER_IP = '66.97.42.27';
   const VIDEO_SERVER_PORT = '6100';
-  const USE_VIDEO_PROXY = true; // Set to true to bypass HTTPS blocks via cam-proxy.php
+  const USE_VIDEO_PROXY = true; // Forzamos proxy para evitar bloqueos HTTPS/CORS
 
   document.getElementById('camAutoLinkBtn')?.addEventListener('click', () => {
     if (!selectedCamVehicleId) return showToast('Selecciona un vehículo primero', 'warning');
@@ -2014,8 +2024,11 @@
     
     const adn = document.getElementById('mtActiveDeviceName');
     const adi = document.getElementById('mtActiveDeviceIMEI');
+    const cfgImei = document.getElementById('mtCfgImei');
+    
     if (adn) adn.textContent = vehicle ? `${vehicle.plate} - ${vehicle.desc}` : device.model;
     if (adi) adi.textContent = `IMEI: ${device.imei}`;
+    if (cfgImei) cfgImei.value = device.imei;
     
     document.querySelectorAll('.mt-device-item').forEach(el => el.classList.remove('active'));
     document.querySelectorAll('.mt-device-item').forEach(item => {
@@ -2201,6 +2214,13 @@
           if (window.renderMapMarkers) renderMapMarkers();
           if (window.renderVehicleListPanel) renderVehicleListPanel();
           if (window.hasOwnProperty('updateStats')) updateStats();
+
+          // AUTO-SEGUIMIENTO: Si hay un vehículo seleccionado, centrar mapa
+          const selectedId = window.selectedTrackingVehicleId || (T.vehicles.length > 0 ? T.vehicles[0].id : null);
+          const vSelected = T.vehicles.find(v => v.id === selectedId);
+          if (vSelected && map) {
+              map.setView([vSelected.lat, vSelected.lng], map.getZoom());
+          }
         }
       }
     } catch (e) {

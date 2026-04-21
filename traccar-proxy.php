@@ -10,7 +10,7 @@ curl_setopt_array($ch, [
     CURLOPT_URL            => $url,
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_TIMEOUT        => 10,
-    CURLOPT_USERPWD        => 'ovalle_938@hotmail.com:Forastero_938',
+    CURLOPT_USERPWD        => 'webcincodev@gmail.com:Forastero938',
     CURLOPT_HTTPAUTH       => CURLAUTH_BASIC,
     CURLOPT_SSL_VERIFYPEER => false,
     CURLOPT_HTTPHEADER     => ['Accept: application/json'],

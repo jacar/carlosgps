@@ -11,7 +11,7 @@ const API_CONFIG = {
 class TrackjfAPI {
     constructor() {
         // Credenciales Reales para Traccar Demo 3
-        this.credentials = btoa('ovalle_938@hotmail.com:Forastero_938'); 
+        this.credentials = btoa('webcincodev@gmail.com:Forastero938'); 
         this.isConnecting = false;
         this.useSimulatedFallback = false;
         
@@ -76,6 +76,7 @@ class TrackjfAPI {
                 v => v.imei === imei
             );
             if (vehicle) {
+                vehicle.hasRealData = true; // Marcar como detectado en vivo en Traccar
                 vehicle.lat    = pos.latitude;
                 vehicle.lng    = pos.longitude;
                 vehicle.speed  = Math.round(pos.speed * 1.852); // nudos → km/h
@@ -83,6 +84,7 @@ class TrackjfAPI {
                 if (vehicle.speed < 5 && !pos.attributes?.ignition) vehicle.status = 'parked';
                 vehicle.address    = pos.address || vehicle.address;
                 vehicle.lastSignal = new Date(pos.deviceTime).toLocaleString('es-VE');
+                vehicle.course     = pos.course;
             }
         });
 
